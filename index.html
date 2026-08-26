@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Meta Tags -->
+    <title>Wakanda Tours | Vive República Dominicana al Estilo Único del Caribe</title>
+    <meta name="description" content="Descubre República Dominicana con Wakanda Tours. Salidas desde AIFA en Noviembre 2026 y Febrero 2027 (Carnaval de La Vega). Vuelos, hotel en playa, 10 excursiones y visa incluida.">
+    <meta name="keywords" content="Wakanda Tours, viajes Republica Dominicana, Punta Cana, Isla Saona, Carnaval de La Vega, AIFA vuelos Republica Dominicana, viajes grupales, Santo Domingo Zona Colonial">
+    <meta name="author" content="Pixel Grimoire x Wakanda Tours">
+    
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wakanda Tours | Tu Viaje Soñado a República Dominicana 🇩🇴">
+    <meta property="og:description" content="Más que un viaje, una experiencia caribeña que recordarás por siempre. Vuelos desde AIFA, 4 ciudades, 10 actividades y todo resuelto.">
+    <meta property="og:image" content="imagenes/republica-playa-1.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        caribbean: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#00A896',
+                            600: '#028090',
+                            900: '#05668D',
+                        },
+                        sand: {
+                            50: '#FFFDF9',
+                            100: '#FAF7F2',
+                            200: '#F4E9D8',
+                            300: '#E8D7C0',
+                        },
+                        sunset: {
+                            400: '#FFB703',
+                            500: '#F4A261',
+                            600: '#E76F51',
+                        },
+                        mercadopago: {
+                            DEFAULT: '#009EE3',
+                            dark: '#0081B8',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 4s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(5, 102, 141, 0.45) 0%, rgba(2, 44, 67, 0.85) 75%, #031B29 100%);
+        }
+        .glass-card {
+            background: rgba(255, 253, 249, 0.94);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(244, 162, 97, 0.3);
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #FFB703 0%, #E76F51 100%);
+            color: #0f172a;
+            font-weight: 800;
+            box-shadow: 0 10px 20px rgba(231, 111, 81, 0.3);
+        }
+        .equalizer-bar {
+            animation: equalizer 1.2s infinite ease-in-out alternate;
+        }
+        @keyframes equalizer {
+            0% { height: 4px; }
+            100% { height: 16px; }
+        }
+    </style>
+</head>
+<body class="text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-caribbean-500 selection:text-white">
+
+    <!-- AUDIO PLAYER ELEMENT CON SOPORTE PARA ARCHIVO LOCAL -->
+    <audio id="caribbean-audio" loop preload="auto">
+        <source src="musica/republica-dominicana.mp3" type="audio/mpeg">
+        <source src="musica/merengue.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=caribbean-rhythm-bachata-merengue-112193.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- HEADER NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-slate-950/85 backdrop-blur-md border-b border-sunset-500/20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-sunset-400 via-sunset-500 to-caribbean-500 flex items-center justify-center font-extrabold text-slate-950 text-2xl shadow-lg shadow-sunset-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palmtree text-slate-950 text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight block leading-none font-serif text-white">WAKANDA</span>
+                    <span class="text-[10px] tracking-widest text-sunset-400 uppercase font-bold">Tours & Travel 🇩🇴</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-sand-200">
+                <a href="#inclusiones" class="hover:text-sunset-400 transition-colors">¿Qué incluye?</a>
+                <a href="#fechas" class="hover:text-sunset-400 transition-colors">Fechas e Itinerario</a>
+                <a href="#testimonios" class="hover:text-sunset-400 transition-colors">Viajeros Reales</a>
+                <a href="#openbar" class="hover:text-sunset-400 transition-colors">Bebidas Extra</a>
+                <a href="#faq" class="hover:text-sunset-400 transition-colors">Condiciones</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <!-- MUSIC TOGGLE BUTTON IN HEADER -->
+                <button id="music-toggle-btn" onclick="toggleAudio()" class="bg-gradient-to-r from-amber-500/20 to-sunset-500/20 hover:from-amber-500/30 hover:to-sunset-500/30 text-amber-300 border border-amber-400/50 px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 shadow-inner">
+                    <i id="music-icon" class="fa-solid fa-compact-disc animate-spin-slow"></i>
+                    <span id="music-text" class="hidden lg:inline">Merengue & Salsa 💃🏻🕺🏽</span>
+                </button>
+
+                <!-- MERCADO PAGO / PAYMENT BUTTON -->
+                <button onclick="openPaymentModal()" class="bg-mercadopago hover:bg-mercadopago-dark text-white font-bold px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm transition-all shadow-lg shadow-mercadopago/30 flex items-center gap-2 hover:scale-105">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span class="hidden sm:inline">Mercado Pago (40%)</span>
+                    <span class="sm:hidden">Apartar</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- FLOATING MUSIC PLAYER WIDGET -->
+    <div class="fixed bottom-6 left-6 z-40 bg-slate-950/95 border border-amber-400/50 backdrop-blur-md rounded-full p-2 pr-5 shadow-2xl flex items-center gap-3 text-white transition-all hover:scale-105">
+        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-gradient-to-r from-sunset-400 via-amber-400 to-sunset-500 text-slate-950 flex items-center justify-center text-xl font-extrabold shadow-lg shrink-0">
+            <i id="widget-music-icon" class="fa-solid fa-play"></i>
+        </button>
+        <div class="text-xs">
+            <div class="flex items-center gap-1.5 font-bold text-amber-300">
+                <span>Merengue & Salsa Dominicana 🇩🇴</span>
+                <span class="flex items-end gap-0.5 h-3">
+                    <span class="w-0.5 bg-amber-400 equalizer-bar" style="animation-delay: 0.1s"></span>
+                    <span class="w-0.5 bg-amber-400 equalizer-bar" style="animation-delay: 0.3s"></span>
+                    <span class="w-0.5 bg-amber-400 equalizer-bar" style="animation-delay: 0.2s"></span>
+                </span>
+            </div>
+            <p id="widget-status" class="text-[10px] text-slate-300">Clic para encender la música 💃🏻🪗</p>
+        </div>
+    </div>
+
+<!-- HERO SECTION -->
+<section class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-slate-950 text-white">
+    
+    <!-- BACKGROUND VIDEO EN LUGAR DE IMAGEN EN EL HERO -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <video autoplay loop muted playsinline 
+               poster="imagenes/republica-playa-1.jpg" 
+               class="w-full h-full object-cover object-center scale-105">
+            <source src="videos/playa-republica-hero.mp4" type="video/mp4">
+            <source src="videos/hero-video.webm" type="video/webm">
+            <!-- Imagen de respaldo si el navegador no soporta video -->
+            <img src="imagenes/hero-playa.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
+        </video>
+        
+        <!-- Capa oscura para garantizar legibilidad del texto -->
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+            
+    <!-- CONTENEDOR PRINCIPAL CENTRADO (ESTO ES LO QUE RESTRUCTURA Y CENTRA EL CONTENIDO) -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+            <!-- Left Copy -->
+            <div class="lg:col-span-7 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                
+                <div class="inline-flex items-center gap-2 bg-slate-900/80 border border-sunset-400/50 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-sunset-400 backdrop-blur-md">
+                    <span class="w-2.5 h-2.5 rounded-full bg-sunset-400 animate-ping"></span>
+                    <span>🇩🇴 Salidas Confirmadas desde AIFA (México) · Cupo Limitado</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">
+                    Vive República Dominicana al estilo único de <br>
+                    <span class="font-serif italic bg-gradient-to-r from-sunset-400 via-sand-200 to-caribbean-300 bg-clip-text text-transparent">Wakanda Tours</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-sand-200 max-w-2xl font-normal leading-relaxed">
+                    4 ciudades por descubrir, más de 10 actividades increíbles, vuelos redondos, hospedaje frente al mar y atención las 24 horas.
+                </p>
+
+                <!-- Key Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-sand-100 text-xs sm:text-sm">
+                    <div class="flex items-center gap-2 bg-slate-900/70 p-3 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        <i class="fa-solid fa-plane-departure text-sunset-400 text-base"></i>
+                        <span>Vuelos desde AIFA</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-900/70 p-3 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        <i class="fa-solid fa-headset text-sunset-400 text-base"></i>
+                        <span>Atención 24/7</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-900/70 p-3 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        <i class="fa-solid fa-passport text-sunset-400 text-base"></i>
+                        <span>Visa & E-Ticket</span>
+                    </div>
+                </div>
+
+                <!-- Quote Banner -->
+                <div class="p-4 rounded-2xl bg-slate-900/60 border-l-4 border-sunset-400 text-sand-200 italic text-sm">
+                    "Aventura, sol, cultura y el merengue más alegre: tu viaje soñado a República Dominicana comienza aquí."
+                </div>
+
+            </div>
+
+            <!-- Right Registration Form Card -->
+            <div id="reservar" class="lg:col-span-5" data-aos="fade-left" data-aos-duration="1000">
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-800 relative overflow-hidden border border-sand-200">
+                    <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-sunset-400 via-sunset-500 to-caribbean-500"></div>
+                    
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="flex items-center gap-2 text-caribbean-600 font-bold text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-ticket"></i> Apartado Exclusivo
+                        </span>
+                        <span class="bg-mercadopago/10 text-mercadopago font-bold text-[11px] px-2.5 py-0.5 rounded-full border border-mercadopago/30">
+                            Mercado Pago Disponible
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-serif">Asegura Tu Lugar</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mb-5">Puedes recibir atención por WhatsApp o pagar tu apartado (40%) directamente por Mercado Pago.</p>
+
+                    <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-3.5">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre Completo</label>
+                            <input type="text" id="lead-name" required placeholder="Ej. Ana y Roberto" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-sunset-400 focus:outline-none transition-all text-sm bg-white/90">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">WhatsApp de Contacto</label>
+                            <input type="tel" id="lead-phone" required placeholder="Ej. 55 1234 5678" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-sunset-400 focus:outline-none transition-all text-sm bg-white/90">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Selecciona Tu Fecha de Salida</label>
+                            <select id="lead-tour-date" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-sunset-400 focus:outline-none transition-all text-sm bg-white/90 font-medium">
+                                <option value="WT2026 (Nov 13 al 20, 2026)">WT2026: Nov 13 al 20, 2026 (Tradicional)</option>
+                                <option value="WT2027 (Feb 19 al 26, 2027)">WT2027: Feb 19 al 26, 2027 (¡Especial Carnaval! 🎉)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">¿Cuántos Pasajeros Viajan?</label>
+                            <select id="lead-passengers" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-sunset-400 focus:outline-none transition-all text-sm bg-white/90">
+                                <option value="1 persona">1 Persona (Individual)</option>
+                                <option value="2 personas" selected>2 Personas (Pareja / Amigos)</option>
+                                <option value="3-4 personas">3 a 4 Personas (Familia)</option>
+                                <option value="5+ personas">Grupo (+5 Personas)</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                            <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Solicitar por Chat</span>
+                            </button>
+
+                            <button type="button" onclick="openPaymentModal()" class="w-full bg-mercadopago hover:bg-mercadopago-dark text-white font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm">
+                                <i class="fa-solid fa-shield-halved text-amber-300"></i>
+                                <span>Pagar con Mercado Pago</span>
+                            </button>
+                        </div>
+
+                        <div class="text-[11px] text-center text-slate-500 space-y-1 pt-1">
+                            <p class="flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-lock text-mercadopago"></i> Procesado de forma 100% segura por Mercado Pago
+                            </p>
+                            <p class="text-[10px] text-slate-400">*Si requieres factura es costo + IVA</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- TESTIMONIOS CON IMÁGENES REALES DE LOS VIAJES -->
+    <section id="testimonios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-caribbean-600 font-bold text-xs uppercase tracking-widest bg-caribbean-50 px-3 py-1 rounded-full border border-caribbean-100">Prueba Social Real</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-serif text-slate-900 tracking-tight mt-3">Experiencias de Nuestros Viajeros</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Fotos e historias reales de integrantes que vivieron la magia de República Dominicana con Wakanda Tours.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-sand-50 rounded-3xl overflow-hidden border border-sand-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="imagenes/isla-saona.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';" alt="Viajeros en Isla Saona" class="w-full h-full object-cover">
+                            <span class="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                                📍 Isla Saona, RD
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex text-amber-400 text-sm mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-sm italic leading-relaxed">
+                                "Viajamos mi esposo y yo. Todo el proceso del e-ticket y la salida desde el AIFA fue súper fluido. Saona en catamarán bailando merengue con el grupo es una experiencia que nunca vamos a olvidar."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-sand-200/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">Mariana & Gabriel S.</h5>
+                            <span class="text-xs text-slate-500">Viajaron en Grupo WT</span>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-caribbean-100 text-caribbean-600 flex items-center justify-center text-xs font-bold"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-sand-50 rounded-3xl overflow-hidden border border-sand-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="imagenes/buggies.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80';" alt="Excursión en Buggies" class="w-full h-full object-cover">
+                            <span class="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                                📍 Ruta de Buggies, Punta Cana
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex text-amber-400 text-sm mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-sm italic leading-relaxed">
+                                "La atención de los guías las 24 horas te da muchísima tranquilidad. El tour de buggies hasta la cueva taína estuvo lleno de adrenalina. Vale cada centavo, ¡súper recomendado!"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-sand-200/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">Carlos Fernando M.</h5>
+                            <span class="text-xs text-slate-500">Viajero Individual</span>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-caribbean-100 text-caribbean-600 flex items-center justify-center text-xs font-bold"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-sand-50 rounded-3xl overflow-hidden border border-sand-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="imagenes/zona-colonial.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568402102990-bc541580b59f?auto=format&fit=crop&w=800&q=80';" alt="Zona Colonial Santo Domingo" class="w-full h-full object-cover">
+                            <span class="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                                📍 Zona Colonial & Juan Dolio
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex text-amber-400 text-sm mb-3">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 text-sm italic leading-relaxed">
+                                "Fuimos un grupo de 4 amigas. Los traslados privados fueron muy cómodos y seguros. Nos encantó la combinación de cultura en Santo Domingo con el descanso frente al mar en la playa."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 border-t border-sand-200/60 mt-4 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">Familia Valenzuela & Amigas</h5>
+                            <span class="text-xs text-slate-500">Viaje Grupal 4 Personas</span>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-caribbean-100 text-caribbean-600 flex items-center justify-center text-xs font-bold"><i class="fa-solid fa-check"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INCLUSIONES (18 PUNTOS COMPLETOS) -->
+    <section id="inclusiones" class="py-20 bg-sand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-caribbean-600 font-bold text-xs uppercase tracking-widest bg-caribbean-50 px-3 py-1 rounded-full border border-caribbean-100">Todo Resuelto</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-slate-900 tracking-tight mt-3">Tus 18 Inclusiones de Viaje</h2>
+                <p class="text-slate-600 mt-2">No tienes que preocuparte por nada. Nos encargamos de toda la operación y logística.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. Vuelos -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-1.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80';" alt="Vuelos redondos AIFA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 1</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-plane"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">1. Vuelos Redondos</h4><p class="text-xs text-slate-600 mt-0.5">Salida directa desde AIFA (Aeropuerto Felipe Ángeles).</p></div>
+                    </div>
+                </div>
+
+                <!-- 2. Seguro -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-2.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80';" alt="Seguro medico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 2</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">2. Seguro de Viajero</h4><p class="text-xs text-slate-600 mt-0.5">Cobertura médica integral durante todo el recorrido.</p></div>
+                    </div>
+                </div>
+
+                <!-- 3. Isla Saona -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/isla-saona.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80';" alt="Isla Saona catamaran" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 3</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-ship"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">3. Excursión Isla Saona</h4><p class="text-xs text-slate-600 mt-0.5">Navegación en catamarán, piscina natural y buffet.</p></div>
+                    </div>
+                </div>
+
+                <!-- 4. Los Tres Ojos -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-4.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80';" alt="Cenotes los tres ojos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 4</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-water"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">4. Excursión Los Tres Ojos</h4><p class="text-xs text-slate-600 mt-0.5">Parque nacional subterráneo de cenotes y lagos.</p></div>
+                    </div>
+                </div>
+
+                <!-- 5. Cuevas Maravillas -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-5.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80';" alt="Cuevas de las maravillas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 5</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-mountain"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">5. Cuevas de las Maravillas</h4><p class="text-xs text-slate-600 mt-0.5">Recorrido por cavernas históricas y arte rupestre.</p></div>
+                    </div>
+                </div>
+
+                <!-- 6. Ciudad Colonial -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-6.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568402102990-bc541580b59f?auto=format&fit=crop&w=600&q=80';" alt="Ciudad colonial Santo Domingo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 6</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-landmark"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">6. Tour Ciudad Colonial</h4><p class="text-xs text-slate-600 mt-0.5">Santo Domingo colonial, Mercado Modelo y Faro a Colón.</p></div>
+                    </div>
+                </div>
+
+                <!-- 7. Buggies -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-7.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80';" alt="Buggies Punta Cana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 7</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-car-side"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">7. Excursión en Buggies</h4><p class="text-xs text-slate-600 mt-0.5">Ruta todoterreno por senderos tropicales y barro.</p></div>
+                    </div>
+                </div>
+
+                <!-- 8. Cenote Cuevas Tainas -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-8.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80';" alt="Cueva Taina Cenote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 8</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-person-swimming"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">8. Cenote Cuevas Taínas</h4><p class="text-xs text-slate-600 mt-0.5">Nado refrescante en aguas cristalinas subterráneas.</p></div>
+                    </div>
+                </div>
+
+                <!-- 9. Playa Juan Dolio -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-9.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80';" alt="Playa Juan Dolio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 9</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">9. Playa Juan Dolio</h4><p class="text-xs text-slate-600 mt-0.5">Desconectar frente al agua cálida del Caribe.</p></div>
+                    </div>
+                </div>
+
+                <!-- 10. Playa Macao (CON VIDEO) -->
+<div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+    <div class="h-36 overflow-hidden relative">
+        <!-- VIDEO REEMPLAZANDO A LA IMAGEN -->
+        <video autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <source src="videos/playa-macao-video.mp4" type="video/mp4">
+        </video>
+        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 10</span>
+    </div>
+    <div class="p-4 flex items-start gap-3">
+        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-sun"></i></div>
+        <div><h4 class="font-bold text-slate-900 text-sm">10. Playa Macao Punta Cana</h4><p class="text-xs text-slate-600 mt-0.5">Una de las playas más famosas del mundo.</p></div>
+    </div>
+</div>
+
+                <!-- 11. Transporte Privado -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-11.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80';" alt="Transporte privado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 11</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-van-shuttle"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">11. Transporte Privado</h4><p class="text-xs text-slate-600 mt-0.5">Unidades exclusivas climatizadas para el grupo.</p></div>
+                    </div>
+                </div>
+
+                <!-- 12. Chofer y Guía -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-12.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80';" alt="Chofer y guia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 12</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-user-check"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">12. Chofer y Guía + Atención 24h</h4><p class="text-xs text-slate-600 mt-0.5">Acompañamiento y asistencia personalizada 24/7.</p></div>
+                    </div>
+                </div>
+
+                <!-- 13. Hospedaje Playa -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-13.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80';" alt="Hospedaje en playa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 13</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-hotel"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">13. Hospedaje en la Playa</h4><p class="text-xs text-slate-600 mt-0.5">Hotel frente al mar en Juan Dolio / zona costera.</p></div>
+                    </div>
+                </div>
+
+                <!-- 14. Desayunos -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-14.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80';" alt="Desayuno incluido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 14</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-utensils"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">14. Desayunos Incluidos</h4><p class="text-xs text-slate-600 mt-0.5">Alimentación matutina lista cada día.</p></div>
+                    </div>
+                </div>
+
+                <!-- 15. Almuerzos -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-15.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80';" alt="Almuerzos en excursiones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 15</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-burger"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">15. Almuerzos en Excursiones</h4><p class="text-xs text-slate-600 mt-0.5">Comidas buffet servidas en las excursiones de playa.</p></div>
+                    </div>
+                </div>
+
+                <!-- 16. Visa -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-16.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80';" alt="Derecho a Visa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 16</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-passport"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">16. Pago Derecho a Visa</h4><p class="text-xs text-slate-600 mt-0.5">Costo e impuestos de visado 100% cubiertos.</p></div>
+                    </div>
+                </div>
+
+                <!-- 17. E-Ticket -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-17.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80';" alt="E-ticket migratorio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 17</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-file-contract"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">17. E-Ticket Migratorio</h4><p class="text-xs text-slate-600 mt-0.5">Nosotros realizamos el llenado del pase digital aduanal.</p></div>
+                    </div>
+                </div>
+
+                <!-- 18. Malecon -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-sand-300 hover:border-sunset-400 transition-all shadow-sm group">
+                    <div class="h-36 overflow-hidden relative">
+                        <img src="imagenes/inc-18.jpg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80';" alt="Malecon San Pedro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 right-2 bg-slate-950/70 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">Punto 18</span>
+                    </div>
+                    <div class="p-4 flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-sunset-400/20 text-sunset-600 flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-city"></i></div>
+                        <div><h4 class="font-bold text-slate-900 text-sm">18. Malecón San Pedro de Macorís</h4><p class="text-xs text-slate-600 mt-0.5">Visita al centro histórico y malecón icónico.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- UPGRADE OPTIONAL OPEN BAR -->
+    <section id="openbar" class="py-16 bg-gradient-to-r from-sunset-500 via-sunset-600 to-caribbean-600 text-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="space-y-3 text-center md:text-left">
+                <span class="bg-white/20 text-white font-bold text-xs uppercase px-3 py-1 rounded-full border border-white/30">Upgrade Opcional</span>
+                <h3 class="text-3xl font-extrabold font-serif">¿Quieres Bebida Diaria por solo $100 USD?</h3>
+                <p class="text-sand-100 text-sm max-w-xl">
+                    Incluye cerveza limitada y ron con cola durante los días del tour. ¡Y para los que no consumen alcohol, agua y refrescos ilimitados!
+                </p>
+            </div>
+            <a href="#reservar" class="bg-slate-950 hover:bg-slate-900 text-white font-bold px-8 py-4 rounded-full text-sm transition-transform hover:scale-105 shadow-2xl shrink-0 flex items-center gap-2">
+                <i class="fa-solid fa-wine-glass text-sunset-400"></i>
+                <span>Agregar Barra Libre ($100 USD)</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FECHAS E ITINERARIOS INTERACTIVOS -->
+    <section id="fechas" class="py-20 bg-sand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <span class="text-sunset-600 font-bold text-xs uppercase tracking-widest bg-sunset-50 px-3 py-1 rounded-full border border-sunset-200">Elige Tu Salida</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold font-serif text-slate-900 mt-2">Próximos Tours Disponibles</h2>
+                <p class="text-slate-600 mt-3 text-sm sm:text-base">Haz clic en cada pestaña para ver el programa completo día por día.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-10 gap-3 sm:gap-6">
+                <button onclick="switchTab('wt2026')" id="btn-wt2026" class="tab-btn active px-6 py-3.5 rounded-full text-sm sm:text-base transition-all flex items-center gap-2 border border-sand-300">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Nov 13 - 20, 2026 (WT2026)</span>
+                </button>
+                <button onclick="switchTab('wt2027')" id="btn-wt2027" class="tab-btn px-6 py-3.5 rounded-full text-sm sm:text-base transition-all bg-white text-slate-700 flex items-center gap-2 border border-sand-300">
+                    <i class="fa-solid fa-mask"></i>
+                    <span>Feb 19 - 26, 2027 (¡Carnaval! 🎉)</span>
+                </button>
+            </div>
+
+            <!-- Tab Content 1: Tour Noviembre 2026 -->
+            <div id="tab-wt2026" class="tab-content space-y-4 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-800 text-xs sm:text-sm font-semibold flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-plane-departure text-amber-600 text-xl"></i>
+                    <span>Salida confirmada desde AIFA (Aeropuerto Internacional Felipe Ángeles).</span>
+                </div>
+
+                <!-- Día 1 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-500 text-slate-950 font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 13</div>
+                    <div><h4 class="font-bold text-slate-900">Viernes 13: Salida a República Dominicana</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Cita y abordaje en el Aeropuerto Internacional Felipe Ángeles (AIFA) con destino a Santo Domingo.</p></div>
+                </div>
+
+                <!-- Día 2 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">SÁB 14</div>
+                    <div><h4 class="font-bold text-slate-900">Sábado 14: Llegada, San Pedro de Macorís y Malecón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Llegada a Santo Domingo, traslado y hospedaje frente a la playa en Juan Dolio. Desayuno y tiempo de descanso. Por la tarde, visita al centro histórico de San Pedro de Macorís y su pintoresco Malecón.</p></div>
+                </div>
+
+                <!-- Día 3 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">DOM 15</div>
+                    <div><h4 class="font-bold text-slate-900">Domingo 15: Santo Domingo Colonial, Los Tres Ojos y Faro a Colón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ida a Santo Domingo: Exploración del Parque Nacional Los Tres Ojos, recorrido guiado por la Zona Colonial, Mercado Modelo y monumento Faro a Colón.</p></div>
+                </div>
+
+                <!-- Día 4 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">LUN 16</div>
+                    <div><h4 class="font-bold text-slate-900">Lunes 16: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita guiada a las imponentes Cuevas de las Maravillas y tiempo libre de playa en la hermosa Playa Dominicus.</p></div>
+                </div>
+
+                <!-- Día 5 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-500 text-slate-950 font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MAR 17</div>
+                    <div><h4 class="font-bold text-slate-900">Martes 17: Buggies, Cueva Taína y Playa Macao (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Adrenalina pura en ruta de Buggies 4x4, refrescante baño en Cueva Taína y relajación en Playa Macao en Punta Cana.</p></div>
+                </div>
+
+                <!-- Día 6 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MIÉ 18</div>
+                    <div><h4 class="font-bold text-slate-900">Miércoles 18: Cap Cana (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita a la exclusiva zona marina de Cap Cana con paisajes de postal y ambiente sofisticado.</p></div>
+                </div>
+
+                <!-- Día 7 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-500 text-slate-950 font-extrabold font-serif flex items-center justify-center text-sm shrink-0">JUE 19</div>
+                    <div><h4 class="font-bold text-slate-900">Jueves 19: Excursión Estrella a Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">El día más esperado: Navegación en catamarán, piscina natural de estrellas de mar y fiesta buffet caribeña en la isla.</p></div>
+                </div>
+
+                <!-- Día 8 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 20</div>
+                    <div><h4 class="font-bold text-slate-900">Viernes 20: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Traslado al aeropuerto y vuelo de regreso a México con recuerdos memorables.</p></div>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: Tour Febrero 2027 (Carnaval) -->
+            <div id="tab-wt2027" class="tab-content hidden space-y-4 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-purple-500/10 border border-purple-500/30 text-slate-800 text-xs sm:text-sm font-semibold flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-masks-theater text-purple-600 text-xl"></i>
+                    <span>¡Edición Especial! Incluye la colorida fiesta del afamado Carnaval de La Vega, RD.</span>
+                </div>
+
+                <!-- Día 1 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 19</div>
+                    <div><h4 class="font-bold text-slate-900">Viernes 19: Salida a Santo Domingo (AIFA)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Abordaje en AIFA con destino a República Dominicana.</p></div>
+                </div>
+
+                <!-- Día 2 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">SÁB 20</div>
+                    <div><h4 class="font-bold text-slate-900">Sábado 20: Llegada, Juan Dolio y San Pedro de Macorís</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Llegada, hospedaje en playa Juan Dolio, desayuno y descanso. Visita al centro histórico y Malecón de San Pedro de Macorís.</p></div>
+                </div>
+
+                <!-- Día 3 SPECIAL CARNAVAL -->
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-400 shadow-md flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">DOM 21</div>
+                    <div><span class="text-[10px] bg-purple-600 text-white font-bold px-2 py-0.5 rounded-full uppercase">Evento Especial</span><h4 class="font-bold text-slate-900 mt-1">Domingo 21: ¡Gran Carnaval de La Vega, RD!</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Experiencia cultural inolvidable en el Carnaval más famoso y antiguo del Caribe. Diablos cojuelos, disfraces, comparsas y música tradicional.</p></div>
+                </div>
+
+                <!-- Día 4 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">LUN 22</div>
+                    <div><h4 class="font-bold text-slate-900">Lunes 22: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Exploración de las cavernas con arte rupestre taíno y tarde de playa en Dominicus.</p></div>
+                </div>
+
+                <!-- Día 5 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-caribbean-500 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MAR 23</div>
+                    <div><h4 class="font-bold text-slate-900">Martes 23: Santo Domingo (Los Tres Ojos, Zona Colonial y Faro)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Recorrido histórico por la cuna de América, cenotes Los Tres Ojos y Mercado Modelo.</p></div>
+                </div>
+
+                <!-- Día 6 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-500 text-slate-950 font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MIÉ 24</div>
+                    <div><h4 class="font-bold text-slate-900">Miércoles 24: Buggies, Cueva Taína y Playa Macao</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ruta salvaje en buggies 4x4, cenote cueva taína y atardecer en Playa Macao (Punta Cana).</p></div>
+                </div>
+
+                <!-- Día 7 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sunset-500 text-slate-950 font-extrabold font-serif flex items-center justify-center text-sm shrink-0">JUE 25</div>
+                    <div><h4 class="font-bold text-slate-900">Jueves 25: Excursión Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Fiesta en catamarán, piscina natural con estrellas de mar y almuerzo de playa.</p></div>
+                </div>
+
+                <!-- Día 8 -->
+                <div class="p-5 rounded-2xl bg-white border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 26</div>
+                    <div><h4 class="font-bold text-slate-900">Viernes 26: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Vuelo de retorno a México desde Santo Domingo.</p></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- POLÍTICAS Y FAQ -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-sunset-600 font-bold text-xs uppercase tracking-widest">Información Importante</span>
+                <h2 class="text-3xl font-extrabold font-serif text-slate-900 mt-1">Condiciones de Reserva</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="p-6 rounded-2xl bg-sand-50 border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="text-sunset-500 text-xl mt-1"><i class="fa-solid fa-thumbtack"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">¿Con cuánto se aparta el viaje?</h4>
+                        <p class="text-slate-600 text-sm mt-1">Puedes congelar tu lugar y la tarifa del grupo con un <strong>40% de anticipo</strong> mediante nuestro botón oficial de Mercado Pago o por transferencia. El saldo restante se liquida en cuotas antes del vuelo.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sand-50 border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="text-sunset-500 text-xl mt-1"><i class="fa-solid fa-receipt"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">¿Emites factura fiscal?</h4>
+                        <p class="text-slate-600 text-sm mt-1">Sí. Si requieres factura fiscal para deducción, el costo es <strong>precio de lista + IVA</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sand-50 border border-sand-300 shadow-sm flex items-start gap-4">
+                    <div class="text-mercadopago text-xl mt-1"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-900">¿Cómo funciona el pago por Mercado Pago?</h4>
+                        <p class="text-slate-600 text-sm mt-1">Procesas tu cobro con total seguridad utilizando saldo de Mercado Pago, tarjeta de débito/crédito, meses sin intereses (según tu banco) o pago en OXXO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/525632134523?text=Hola%20Wakanda%20Tours,%20quiero%20informes%20para%20apartar%20mi%20lugar%20con%20el%2040%25%20[Ref:%20LANDING-RD] MENSAJE DE PRUEBA WHATSAPP API DESDE WEB WAKANDATOURS" 
+   target="_blank" 
+   class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-emerald-500 to-caribbean-500 hover:from-emerald-600 hover:to-caribbean-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl animate-float hover:scale-110 transition-transform">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <!-- MODAL DE PAGO MERCADO PAGO -->
+    <div id="payment-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-sand-300 overflow-hidden max-h-[90vh] overflow-y-auto">
+            <button onclick="closePaymentModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-2 text-mercadopago text-xs font-bold uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-shield-halved"></i> Mercado Pago Checkout Seguro
+            </div>
+            <h3 class="text-2xl font-extrabold font-serif text-slate-900 mb-1">Apartado de Viaje (40%)</h3>
+            <p class="text-xs text-slate-500 mb-6">Completa tus datos para ser redirigido al portal oficial de pago seguro de Mercado Pago.</p>
+
+            <form id="card-payment-form" onsubmit="processCardPayment(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Selecciona Fecha de Tour</label>
+                    <select id="modal-tour-select" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-mercadopago focus:outline-none text-sm font-medium">
+                        <option value="WT2026">Nov 13-20, 2026 (WT2026)</option>
+                        <option value="WT2027">Feb 19-26, 2027 (WT2027 Carnaval)</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre del Titular</label>
+                        <input type="text" id="modal-name" required placeholder="Tu Nombre Completo" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-mercadopago focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico</label>
+                        <input type="email" id="modal-email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-mercadopago focus:outline-none text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Teléfono WhatsApp</label>
+                    <input type="tel" id="modal-phone" required placeholder="55 1234 5678" class="w-full px-4 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-mercadopago focus:outline-none text-sm">
+                </div>
+
+                <div class="p-3 bg-mercadopago/5 rounded-xl border border-mercadopago/20 text-xs text-slate-600 space-y-1">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>Anticipo de Apartado (40%):</span>
+                        <span class="text-mercadopago font-extrabold text-sm">$8,000 MXN</span>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Acepta tarjetas de crédito, débito, dinero en cuenta Mercado Pago o efectivo en OXXO.</p>
+                </div>
+
+                <!-- Accepted Payment Method Icons -->
+                <div class="flex items-center justify-center gap-4 pt-1 text-slate-400 text-2xl">
+                    <i class="fa-brands fa-cc-visa text-blue-600"></i>
+                    <i class="fa-brands fa-cc-mastercard text-red-500"></i>
+                    <i class="fa-brands fa-cc-amex text-sky-600"></i>
+                    <span class="text-xs font-bold bg-slate-100 text-slate-700 px-2 py-1 rounded">OXXO</span>
+                    <span class="text-xs font-bold bg-mercadopago/10 text-mercadopago px-2 py-1 rounded">Mercado Pago</span>
+                </div>
+
+                <button type="submit" class="w-full bg-mercadopago hover:bg-mercadopago-dark text-white font-bold py-4 rounded-xl transition-all shadow-xl text-base flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Ir a Pagar en Mercado Pago</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER WITH PIXEL GRIMOIRE HYPERLINK -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="text-xl font-extrabold font-serif text-white">WAKANDA TOURS & TRAVEL 🇩🇴</div>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">
+                "El lujo de viajar, la emoción de descubrir, la alegría de compartir."
+            </p>
+            <div class="text-xs text-slate-500 pt-4 border-t border-slate-900">
+                &copy; 2026 Wakanda Tours. Desarrollado con ❤️ por 
+                <a href="https://pixelgrimoire.com" target="_blank" rel="noopener" class="text-sunset-400 font-bold hover:underline transition-all">
+                    Pixel Grimoire
+                </a>.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // AUDIO PLAYER LOGIC CON MANEJO DE ERRORES ROBUSTO
+        const audio = document.getElementById('caribbean-audio');
+        let isPlaying = false;
+
+        function toggleAudio() {
+            const musicIcon = document.getElementById('music-icon');
+            const widgetIcon = document.getElementById('widget-music-icon');
+            const widgetStatus = document.getElementById('widget-status');
+
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                musicIcon.className = 'fa-solid fa-compact-disc animate-spin-slow';
+                widgetIcon.className = 'fa-solid fa-play';
+                widgetStatus.innerText = 'Clic para encender la música 💃🏻🪗';
+            } else {
+                // Forzar recarga si no ha cargado bien el archivo local
+                if (audio.readyState === 0) {
+                    audio.load();
+                }
+                
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        isPlaying = true;
+                        musicIcon.className = 'fa-solid fa-pause text-amber-400';
+                        widgetIcon.className = 'fa-solid fa-pause';
+                        widgetStatus.innerText = 'Sonando: Merengue & Salsa 🇩🇴🔥';
+                    }).catch(err => {
+                        console.error('Error al reproducir audio:', err);
+                        alert('No se pudo reproducir el archivo de audio local. Verifica que tu archivo esté en la carpeta "musica/republica-dominicana.mp3".');
+                        widgetStatus.innerText = 'Error al cargar audio local ❌';
+                    });
+                }
+            }
+        }
+
+        // Modal Functions
+        function openPaymentModal() {
+            document.getElementById('payment-modal').classList.remove('hidden');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('payment-modal').classList.add('hidden');
+        }
+
+        // MERCADO PAGO REDIRECT / LINK INTEGRATION
+        function processCardPayment(e) {
+            e.preventDefault();
+            
+            const mercadoPagoLink = "https://www.mercadopago.com.mx";
+
+            const name = document.getElementById('modal-name').value;
+            const tour = document.getElementById('modal-tour-select').value;
+            
+            alert(`¡Gracias ${name}! Serás redirigido a Mercado Pago para completar tu apartado del 40% para el tour ${tour}.`);
+            
+            window.open(mercadoPagoLink, '_blank');
+            closePaymentModal();
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('bg-white', 'text-slate-700');
+        }
+
+        // WhatsApp Lead Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('lead-name').value;
+            const phone = document.getElementById('lead-phone').value;
+            const tourDate = document.getElementById('lead-tour-date').value;
+            const passengers = document.getElementById('lead-passengers').value;
+
+            const waNumber = "525632134523"; 
+            const message = `Hola Wakanda Tours, mi nombre es *${name}* (${phone}). Me interesa apartar con el 40% para *${passengers}* en la fecha: *${tourDate}*. [Ref: LANDING-RD] ESTE ES UN MENSAJE DE PRUEBA DE DESARROLLO DE PAGINA WEB/WAKANDA TOURS, DESARROLLADO POR PIXELGRIMOIRE`;
+            
+            window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
