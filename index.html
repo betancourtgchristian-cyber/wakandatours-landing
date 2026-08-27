@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO & Meta Tags Optimizado -->
     <title>Wakanda Tours | Viajes Todo Incluido a República Dominicana 🇩🇴</title>
     <meta name="description" content="Viaja a República Dominicana Todo Incluido con Wakanda Tours. Vuelos redondos desde AIFA, hoteles frente al mar, 10+ excursiones, transporte, visa y e-ticket incluidos. ¡Reserva hoy!">
     <meta name="keywords" content="Wakanda Tours, viaje Todo Incluido Republica Dominicana, vuelos AIFA Punta Cana, Isla Saona excursión, Carnaval de La Vega 2027, paquete vacacional caribe, viajes grupales Santo Domingo">
@@ -39,14 +38,13 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        // PALETA PALMERA & TRICOLOR DOMINICANO 🇩🇴
                         dom: {
-                            blue: '#002D62',       // Azul Dominicano Profundo
-                            bluelight: '#0056B3',  // Azul Caribe Vivo
-                            red: '#CE1126',        // Rojo Dominicano Vibrant
-                            reddark: '#9B0B1B',    // Rojo Intenso
-                            white: '#FAFCFF',      // Blanco Coral
-                            gold: '#FFC72C',       // Sol Caribeño
+                            blue: '#002D62',
+                            bluelight: '#0056B3',
+                            red: '#CE1126',
+                            reddark: '#9B0B1B',
+                            white: '#FAFCFF',
+                            gold: '#FFC72C',
                         },
                         stripe: {
                             DEFAULT: '#635BFF',
@@ -341,7 +339,7 @@
         </div>
     </section>
 
-    <!-- INCLUSIONES CON VIDEO (SIN PUNTOS) -->
+    <!-- INCLUSIONES CON VIDEO Y BOTÓN DE PLAY MEJORADO -->
     <section id="inclusiones" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
@@ -352,12 +350,18 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
+                <!-- Helper Macro para Video Card con Botón Play -->
                 <!-- 1. Vuelos -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-1.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/vuelos-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-plane"></i></div>
@@ -366,11 +370,16 @@
                 </div>
 
                 <!-- 2. Seguro -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-2.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/seguro-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-shield-halved"></i></div>
@@ -379,11 +388,16 @@
                 </div>
 
                 <!-- 3. Isla Saona -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/isla-saona.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/isla-saona-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-ship"></i></div>
@@ -392,11 +406,16 @@
                 </div>
 
                 <!-- 4. Los Tres Ojos -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-4.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/tres-ojos-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-water"></i></div>
@@ -405,11 +424,16 @@
                 </div>
 
                 <!-- 5. Cuevas Maravillas -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-5.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/cuevas-maravillas-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-mountain"></i></div>
@@ -418,11 +442,16 @@
                 </div>
 
                 <!-- 6. Ciudad Colonial -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-6.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/ciudad-colonial-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-landmark"></i></div>
@@ -431,11 +460,16 @@
                 </div>
 
                 <!-- 7. Buggies -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-7.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/buggies-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-car-side"></i></div>
@@ -444,11 +478,16 @@
                 </div>
 
                 <!-- 8. Cenote Cuevas Tainas -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-8.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/cuevas-tainas-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-person-swimming"></i></div>
@@ -457,11 +496,16 @@
                 </div>
 
                 <!-- 9. Playa Juan Dolio -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-9.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/juan-dolio-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-umbrella-beach"></i></div>
@@ -470,11 +514,16 @@
                 </div>
 
                 <!-- 10. Playa Macao -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-10.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/playa-macao-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-sun"></i></div>
@@ -483,11 +532,16 @@
                 </div>
 
                 <!-- 11. Transporte Privado -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-11.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/transporte-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-van-shuttle"></i></div>
@@ -496,11 +550,16 @@
                 </div>
 
                 <!-- 12. Chofer y Guía -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-12.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/guia-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-user-check"></i></div>
@@ -509,11 +568,16 @@
                 </div>
 
                 <!-- 13. Hospedaje Playa -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-13.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/hospedaje-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-hotel"></i></div>
@@ -522,11 +586,16 @@
                 </div>
 
                 <!-- 14. Desayunos -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-14.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/desayunos-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-utensils"></i></div>
@@ -535,11 +604,16 @@
                 </div>
 
                 <!-- 15. Almuerzos -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-15.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/almuerzos-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-burger"></i></div>
@@ -548,11 +622,16 @@
                 </div>
 
                 <!-- 16. Visa -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-16.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/visa-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-passport"></i></div>
@@ -561,11 +640,16 @@
                 </div>
 
                 <!-- 17. E-Ticket -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-17.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/eticket-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-file-contract"></i></div>
@@ -574,11 +658,16 @@
                 </div>
 
                 <!-- 18. Malecon -->
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-sm group inclusion-card">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-18.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                             <source src="videos/malecon-video.mp4" type="video/mp4">
                         </video>
+                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
+                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
+                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4 flex items-start gap-3">
                         <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-city"></i></div>
@@ -690,7 +779,7 @@
                 </div>
             </div>
 
-            <!-- ITINERARIOS DÍA A DÍA -->
+            <!-- ITINERARIOS DÍA A DÍA CON DISEÑO REFORZADO -->
             <div class="flex justify-center mb-8 gap-3 sm:gap-6 flex-wrap">
                 <button onclick="switchTab('wt2026')" id="btn-wt2026" class="tab-btn active px-6 py-3.5 rounded-full text-xs sm:text-sm transition-all flex items-center gap-2 border border-slate-300">
                     <i class="fa-solid fa-calendar-days"></i>
@@ -704,81 +793,97 @@
 
             <!-- Tab Content 1: Tour Noviembre 2026 -->
             <div id="tab-wt2026" class="tab-content space-y-4 max-w-4xl mx-auto">
-                <div class="p-4 rounded-2xl bg-blue-50 border border-dom-bluelight/30 text-dom-blue text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4">
+                <div class="p-4 rounded-2xl bg-blue-50 border border-dom-bluelight/40 text-dom-blue text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4 shadow-sm">
                     <i class="fa-solid fa-plane-departure text-dom-bluelight text-xl"></i>
                     <span>Salida confirmada desde AIFA (Aeropuerto Internacional Felipe Ángeles).</span>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-blue text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 13</div>
-                    <div><h4 class="font-bold text-slate-900">Viernes 13: Salida a República Dominicana</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Cita y abordaje en el AIFA con destino a Santo Domingo.</p></div>
+                
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-blue">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-blue text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">VIE 13</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Viernes 13: Salida a República Dominicana</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Cita y abordaje en el AIFA con destino a Santo Domingo.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">SÁB 14</div>
-                    <div><h4 class="font-bold text-slate-900">Sábado 14: Llegada, San Pedro de Macorís y Malecón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Llegada a Santo Domingo, traslado y hospedaje frente a la playa en Juan Dolio. Desayuno y tiempo de descanso. Por la tarde, visita al centro histórico de San Pedro de Macorís y su Malecón.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">SÁB 14</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Sábado 14: Llegada, San Pedro de Macorís y Malecón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Llegada a Santo Domingo, traslado y hospedaje frente a la playa en Juan Dolio. Desayuno y tiempo de descanso. Por la tarde, visita al centro histórico de San Pedro de Macorís y su Malecón.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">DOM 15</div>
-                    <div><h4 class="font-bold text-slate-900">Domingo 15: Santo Domingo Colonial, Los Tres Ojos y Faro a Colón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Exploración del Parque Nacional Los Tres Ojos, recorrido guiado por la Zona Colonial, Mercado Modelo y Faro a Colón.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">DOM 15</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Domingo 15: Santo Domingo Colonial, Los Tres Ojos y Faro a Colón</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Exploración del Parque Nacional Los Tres Ojos, recorrido guiado por la Zona Colonial, Mercado Modelo y Faro a Colón.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">LUN 16</div>
-                    <div><h4 class="font-bold text-slate-900">Lunes 16: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita a las Cuevas de las Maravillas y tiempo libre de playa en la hermosa Playa Dominicus.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">LUN 16</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Lunes 16: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita a las Cuevas de las Maravillas y tiempo libre de playa en la hermosa Playa Dominicus.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MAR 17</div>
-                    <div><h4 class="font-bold text-slate-900">Martes 17: Buggies, Cueva Taína y Playa Macao (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ruta de Buggies 4x4, baño en Cueva Taína y relajación en Playa Macao en Punta Cana.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-red">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">MAR 17</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Martes 17: Buggies, Cueva Taína y Playa Macao (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ruta de Buggies 4x4, baño en Cueva Taína y relajación en Playa Macao en Punta Cana.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MIÉ 18</div>
-                    <div><h4 class="font-bold text-slate-900">Miércoles 18: Cap Cana (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita a la exclusiva zona marina de Cap Cana.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">MIÉ 18</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Miércoles 18: Cap Cana (Punta Cana)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Visita a la exclusiva zona marina de Cap Cana.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">JUE 19</div>
-                    <div><h4 class="font-bold text-slate-900">Jueves 19: Excursión Estrella a Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Navegación en catamarán, piscina natural de estrellas de mar y fiesta buffet caribeña.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-red">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">JUE 19</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Jueves 19: Excursión Estrella a Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Navegación en catamarán, piscina natural de estrellas de mar y fiesta buffet caribeña.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 20</div>
-                    <div><h4 class="font-bold text-slate-900">Viernes 20: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Traslado al aeropuerto y vuelo de regreso a México.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">VIE 20</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Viernes 20: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Traslado al aeropuerto y vuelo de regreso a México.</p></div>
                 </div>
             </div>
 
             <!-- Tab Content 2: Tour Febrero 2027 (Carnaval) -->
             <div id="tab-wt2027" class="tab-content hidden space-y-4 max-w-4xl mx-auto">
-                <div class="p-4 rounded-2xl bg-red-50 border border-dom-red/30 text-dom-red text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4">
+                <div class="p-4 rounded-2xl bg-red-50 border border-dom-red/40 text-dom-red text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4 shadow-sm">
                     <i class="fa-solid fa-masks-theater text-dom-red text-xl"></i>
                     <span>¡Edición Especial! Incluye la colorida fiesta del afamado Carnaval de La Vega, RD.</span>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 19</div>
-                    <div><h4 class="font-bold text-slate-900">Viernes 19: Salida a Santo Domingo (AIFA)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Abordaje en AIFA con destino a República Dominicana.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-red">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">VIE 19</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Viernes 19: Salida a Santo Domingo (AIFA)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Abordaje en AIFA con destino a República Dominicana.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">SÁB 20</div>
-                    <div><h4 class="font-bold text-slate-900">Sábado 20: Llegada, Juan Dolio y San Pedro de Macorís</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Hospedaje en playa, descanso y recorrido histórico por San Pedro de Macorís.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">SÁB 20</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Sábado 20: Llegada, Juan Dolio y San Pedro de Macorís</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Hospedaje en playa, descanso y recorrido histórico por San Pedro de Macorís.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-gradient-to-r from-red-50 to-blue-50 border-2 border-dom-red shadow-md flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">DOM 21</div>
-                    <div><span class="text-[10px] bg-dom-red text-white font-bold px-2 py-0.5 rounded-full uppercase">Evento Especial</span><h4 class="font-bold text-slate-900 mt-1">Domingo 21: ¡Gran Carnaval de La Vega, RD!</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Experiencia en el Carnaval más famoso del Caribe. Diablos cojuelos, disfraces y comparsas.</p></div>
+
+                <div class="p-5 rounded-2xl bg-gradient-to-r from-red-50 to-blue-50 border-2 border-dom-red shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">DOM 21</div>
+                    <div><span class="text-[10px] bg-dom-red text-white font-bold px-2 py-0.5 rounded-full uppercase">Evento Especial</span><h4 class="font-bold text-slate-900 text-base mt-1">Domingo 21: ¡Gran Carnaval de La Vega, RD!</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Experiencia en el Carnaval más famoso del Caribe. Diablos cojuelos, disfraces y comparsas.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">LUN 22</div>
-                    <div><h4 class="font-bold text-slate-900">Lunes 22: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Arte rupestre taíno y tarde de playa en Dominicus.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">LUN 22</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Lunes 22: Cuevas de las Maravillas y Playa Dominicus</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Arte rupestre taíno y tarde de playa en Dominicus.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MAR 23</div>
-                    <div><h4 class="font-bold text-slate-900">Martes 23: Santo Domingo (Los Tres Ojos, Zona Colonial y Faro)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Recorrido histórico por la cuna de América, cenotes Los Tres Ojos y Mercado Modelo.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-bluelight">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-bluelight text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">MAR 23</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Martes 23: Santo Domingo (Los Tres Ojos, Zona Colonial y Faro)</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Recorrido histórico por la cuna de América, cenotes Los Tres Ojos y Mercado Modelo.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">MIÉ 24</div>
-                    <div><h4 class="font-bold text-slate-900">Miércoles 24: Buggies, Cueva Taína y Playa Macao</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ruta en buggies 4x4, cenote cueva taína y atardecer en Playa Macao (Punta Cana).</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-red">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">MIÉ 24</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Miércoles 24: Buggies, Cueva Taína y Playa Macao</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Ruta en buggies 4x4, cenote cueva taína y atardecer en Playa Macao (Punta Cana).</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">JUE 25</div>
-                    <div><h4 class="font-bold text-slate-900">Jueves 25: Excursión Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Fiesta en catamarán, piscina natural con estrellas de mar y almuerzo de playa.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-dom-red">
+                    <div class="w-12 h-12 rounded-2xl bg-dom-red text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">JUE 25</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Jueves 25: Excursión Isla Saona</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Fiesta en catamarán, piscina natural con estrellas de mar y almuerzo de playa.</p></div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0">VIE 26</div>
-                    <div><h4 class="font-bold text-slate-900">Viernes 26: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Vuelo de retorno a México desde Santo Domingo.</p></div>
+
+                <div class="p-5 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-start gap-4 border-l-4 border-l-slate-800">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-extrabold font-serif flex items-center justify-center text-sm shrink-0 shadow">VIE 26</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">Viernes 26: Regreso a México</h4><p class="text-xs sm:text-sm text-slate-600 mt-1">Vuelo de retorno a México desde Santo Domingo.</p></div>
                 </div>
             </div>
 
@@ -802,7 +907,7 @@
         </div>
     </section>
 
-    <!-- FAQS -->
+    <!-- FAQS CON DISEÑO REFORZADO -->
     <section id="faq" class="py-20 bg-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -810,28 +915,34 @@
                 <h2 class="text-3xl font-extrabold font-serif text-dom-blue mt-1">Preguntas Frecuentes y Políticas</h2>
             </div>
 
-            <div class="space-y-4">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="text-dom-blue text-xl mt-1"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="space-y-5">
+                <div class="p-6 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-dom-blue/10 text-dom-blue flex items-center justify-center text-xl shrink-0 mt-0.5 border border-dom-blue/20">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-slate-900">¿Por qué hay diferencia de precio entre Pago con Tarjeta y Transferencia?</h4>
-                        <p class="text-slate-600 text-sm mt-1">Nuestra tarifa oficial de lista está calculada para pagos en efectivo o transferencia bancaria. Si decides pagar con tarjeta de crédito/débito a través de la pasarela de Stripe, aplicamos un pequeño cargo por procesamiento bancario para no alterar nuestro costo operativo base.</p>
+                        <h4 class="font-bold text-slate-900 text-base">¿Por qué hay diferencia de precio entre Pago con Tarjeta y Transferencia?</h4>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Nuestra tarifa oficial de lista está calculada para pagos en efectivo o transferencia bancaria. Si decides pagar con tarjeta de crédito/débito a través de la pasarela de Stripe, aplicamos un pequeño cargo por procesamiento bancario para no alterar nuestro costo operativo base.</p>
                     </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="text-dom-blue text-xl mt-1"><i class="fa-solid fa-thumbtack"></i></div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-dom-blue/10 text-dom-blue flex items-center justify-center text-xl shrink-0 mt-0.5 border border-dom-blue/20">
+                        <i class="fa-solid fa-thumbtack"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-slate-900">¿Con cuánto se aparta el viaje?</h4>
-                        <p class="text-slate-600 text-sm mt-1">Puedes congelar tu lugar con un <strong>40% de anticipo por pasajero</strong> pagando vía Stripe o por transferencia bancaria ($8,000 MXN por persona). El saldo restante lo puedes liquidar en pagos antes de la fecha del vuelo.</p>
+                        <h4 class="font-bold text-slate-900 text-base">¿Con cuánto se aparta el viaje?</h4>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Puedes congelar tu lugar con un <strong>40% de anticipo por pasajero</strong> pagando vía Stripe o por transferencia bancaria ($8,000 MXN por persona). El saldo restante lo puedes liquidar en pagos antes de la fecha del vuelo.</p>
                     </div>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
-                    <div class="text-dom-blue text-xl mt-1"><i class="fa-solid fa-receipt"></i></div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-300 shadow-md hover:shadow-lg transition-all flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-dom-blue/10 text-dom-blue flex items-center justify-center text-xl shrink-0 mt-0.5 border border-dom-blue/20">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-slate-900">¿Emites factura fiscal?</h4>
-                        <p class="text-slate-600 text-sm mt-1">Sí. Si requieres factura fiscal para deducción, el costo es <strong>precio publicado + IVA</strong>.</p>
+                        <h4 class="font-bold text-slate-900 text-base">¿Emites factura fiscal?</h4>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Sí. Si requieres factura fiscal para deducción, el costo es <strong>precio publicado + IVA</strong>.</p>
                     </div>
                 </div>
             </div>
