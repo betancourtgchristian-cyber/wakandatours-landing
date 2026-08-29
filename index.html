@@ -155,13 +155,21 @@
     </div>
 
     <section class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-slate-950 text-white">
-        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <video id="hero-bg-video" autoplay loop muted playsinline poster="imagenes/republica-playa-1.jpg" class="w-full h-full object-cover object-center scale-105">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <video id="hero-bg-video" 
+                   autoplay 
+                   loop 
+                   muted 
+                   playsinline 
+                   webkit-playsinline
+                   preload="auto"
+                   poster="imagenes/republica-playa-1.jpg" 
+                   class="w-full h-full object-cover object-center scale-105 pointer-events-none">
                 <source src="videos/playa-republica-hero.mp4" type="video/mp4">
                 <source src="videos/hero-video.webm" type="video/webm">
-                <img src="imagenes/hero-playa.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
+                <img src="imagenes/republica-playa-1.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
             </video>
-            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
         </div>
             
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
@@ -716,7 +724,7 @@
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-slate-700 text-sm italic leading-relaxed">
-                                "Fuimos 4 amigas a la salida de Carnaval. Un viaje sumamente completo y organized. Repetiríamos con Wakanda Tours sin duda."
+                                "Fuimos 4 amigas a la salida de Carnaval. Un viaje sumamente completo y organizado. Repetiríamos con Wakanda Tours sin duda."
                             </p>
                         </div>
                     </div>
@@ -888,7 +896,7 @@
             { id: 18, title: "18. Malecón San Pedro de Macorís", icon: "fa-city", img: "imagenes/inc-18.jpg", fallback: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80", desc: "Paseo por el emblemático malecón costero y centro urbano histórico de San Pedro de Macorís." }
         ];
 
-        // RENDERIZAR TARJETAS DE INCLUSIONES
+        // INICIALIZACIÓN Y RENDERIZADO
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('inclusiones-grid');
             if (grid) {
@@ -909,10 +917,13 @@
                 `).join('');
             }
 
-            // Reproducir Video Hero automáticamente
+            // REPRODUCCIÓN REFORZADA DEL VIDEO HERO
             const heroVideo = document.getElementById('hero-bg-video');
             if (heroVideo) {
-                heroVideo.play().catch(e => console.log('Autoplay preventivo hero:', e));
+                heroVideo.muted = true; // Forzar silenciamiento por JS para garantizar Autoplay
+                heroVideo.play().catch(error => {
+                    console.log("Autoplay bloqueado o archivo no encontrado:", error);
+                });
             }
 
             updateStripeDeposit(document.getElementById('modal-passengers-select').value);
