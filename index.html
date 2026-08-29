@@ -102,8 +102,8 @@
     <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-dom-blue/95 backdrop-blur-md border-b border-dom-red/30 text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-dom-red via-dom-bluelight to-dom-blue flex items-center justify-center font-extrabold text-white text-2xl shadow-lg shadow-dom-red/30 group-hover:scale-105 transition-transform border border-white/20">
-                    <i class="fa-solid fa-palmtree text-white text-xl"></i>
+                <div class="w-11 h-11 rounded-2xl bg-dom-blue flex items-center justify-center font-extrabold text-white text-2xl shadow-lg border border-dom-gold/40 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-palmtree text-dom-gold text-xl"></i>
                 </div>
                 <div>
                     <span class="text-2xl font-extrabold tracking-tight block leading-none font-serif text-white">WAKANDA</span>
@@ -114,14 +114,14 @@
             <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-100">
                 <a href="#inclusiones" class="hover:text-dom-gold transition-colors">¿Qué incluye?</a>
                 <a href="#fechas" class="hover:text-dom-gold transition-colors">Fechas y Tarifas</a>
-                <a href="#openbar" class="hover:text-dom-gold transition-colors">Bebidas Extra</a>
+                <a href="#fundacion" class="hover:text-dom-gold transition-colors">Causa Social</a>
                 <a href="#faq" class="hover:text-dom-gold transition-colors">Preguntas Frecuentes</a>
                 <a href="#testimonios" class="hover:text-dom-gold transition-colors">Reseñas</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <button id="music-toggle-btn" onclick="toggleAudio()" class="bg-dom-blue hover:bg-dom-bluelight text-dom-gold border border-dom-gold/50 px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 shadow-inner">
-                    <i id="music-icon" class="fa-solid fa-compact-disc animate-spin-slow"></i>
+                <button id="music-toggle-btn" onclick="toggleAudio()" class="bg-dom-blue hover:bg-dom-bluelight text-dom-gold border border-dom-gold/60 px-4 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 shadow-md">
+                    <i id="music-icon" class="fa-solid fa-compact-disc animate-spin-slow text-dom-gold"></i>
                     <span id="music-text" class="hidden lg:inline">Sonido Dominicano 🎶</span>
                 </button>
 
@@ -134,9 +134,9 @@
         </div>
     </header>
 
-    <div class="fixed bottom-6 left-6 z-40 bg-dom-blue/95 border border-dom-gold/60 backdrop-blur-md rounded-full p-2 pr-5 shadow-2xl flex items-center gap-3 text-white transition-all hover:scale-105">
-        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-dom-gold hover:bg-yellow-400 text-dom-blue flex items-center justify-center text-xl font-extrabold shadow-lg shrink-0 border border-white/50 transition-colors">
-            <i id="widget-music-icon" class="fa-solid fa-play"></i>
+    <div class="fixed bottom-6 left-6 z-40 bg-dom-blue border border-dom-gold/60 backdrop-blur-md rounded-full p-2 pr-5 shadow-2xl flex items-center gap-3 text-white transition-all hover:scale-105">
+        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-dom-blue hover:bg-dom-bluelight text-dom-gold flex items-center justify-center text-xl font-extrabold shadow-lg shrink-0 border-2 border-dom-gold transition-colors">
+            <i id="widget-music-icon" class="fa-solid fa-play pl-0.5"></i>
         </button>
         <div class="text-xs">
             <div class="flex items-center gap-1.5 font-bold text-dom-gold">
@@ -155,19 +155,20 @@
     </div>
 
     <section class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-slate-950 text-white">
-        <div class="absolute inset-0 z-0 overflow-hidden">
-            <video id="hero-video" autoplay loop muted playsinline poster="imagenes/republica-playa-1.jpg" class="w-full h-full object-cover object-center scale-105">
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <video id="hero-bg-video" autoplay loop muted playsinline poster="imagenes/republica-playa-1.jpg" class="w-full h-full object-cover object-center scale-105">
                 <source src="videos/playa-republica-hero.mp4" type="video/mp4">
                 <source src="videos/hero-video.webm" type="video/webm">
+                <img src="imagenes/hero-playa.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
             </video>
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
-                
+            
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
                 <div class="lg:col-span-7 space-y-6" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-dom-blue/80 to-dom-red/80 border border-dom-gold px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white backdrop-blur-md shadow-lg">
+                    <div class="inline-flex items-center gap-2 bg-dom-blue/80 border border-dom-gold px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white backdrop-blur-md shadow-lg">
                         <span class="w-2.5 h-2.5 rounded-full bg-dom-gold animate-ping"></span>
                         <span>🌴 EXPERIENCIA TODO INCLUIDO · Salidas Directas desde AIFA</span>
                     </div>
@@ -324,321 +325,14 @@
 
     <section id="inclusiones" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+            <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
                 <span class="text-dom-blue font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-dom-bluelight/20">Experiencia 100% Resuelta</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-dom-blue tracking-tight mt-3">Tus 18 Inclusiones Todo Incluido</h2>
-                <p class="text-slate-600 mt-2 text-sm sm:text-base">Sin sorpresas ni gastos extra. Pasa el cursor o presiona sobre cada tarjeta para previsualizar la experiencia.</p>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Haz clic o toca cualquiera de las siguientes 18 tarjetas para abrir la postal con detalles e imagen completa.</p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-1.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/vuelos-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-plane"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">1. Vuelos Redondos</h4><p class="text-xs text-slate-600 mt-0.5">Salida directa desde AIFA (Aeropuerto Felipe Ángeles).</p></div>
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="inclusiones-grid">
                 </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-2.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/seguro-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">2. Seguro de Viajero</h4><p class="text-xs text-slate-600 mt-0.5">Cobertura médica integral durante todo el recorrido.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/isla-saona.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/isla-saona-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-ship"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">3. Excursión Isla Saona</h4><p class="text-xs text-slate-600 mt-0.5">Navegación en catamarán, piscina natural y buffet.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-4.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/tres-ojos-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-water"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">4. Excursión Los Tres Ojos</h4><p class="text-xs text-slate-600 mt-0.5">Parque nacional subterráneo de cenotes y lagos.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-5.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/cuevas-maravillas-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-mountain"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">5. Cuevas de las Maravillas</h4><p class="text-xs text-slate-600 mt-0.5">Recorrido por cavernas históricas y arte rupestre.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-6.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/ciudad-colonial-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-landmark"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">6. Tour Ciudad Colonial</h4><p class="text-xs text-slate-600 mt-0.5">Santo Domingo colonial, Mercado Modelo y Faro a Colón.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-7.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/buggies-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-car-side"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">7. Excursión en Buggies</h4><p class="text-xs text-slate-600 mt-0.5">Ruta todoterreno por senderos tropicales y barro.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-8.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/cuevas-tainas-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-person-swimming"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">8. Cenote Cuevas Taínas</h4><p class="text-xs text-slate-600 mt-0.5">Nado refrescante en aguas cristalinas subterráneas.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-9.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/juan-dolio-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-umbrella-beach"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">9. Playa Juan Dolio</h4><p class="text-xs text-slate-600 mt-0.5">Desconectar frente al agua cálida del Caribe.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-10.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/playa-macao-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-sun"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">10. Playa Macao Punta Cana</h4><p class="text-xs text-slate-600 mt-0.5">Una de las playas más famosas del mundo.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-11.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/transporte-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-van-shuttle"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">11. Transporte Privado</h4><p class="text-xs text-slate-600 mt-0.5">Unidades exclusivas climatizadas para el grupo.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-12.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/guia-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-user-check"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">12. Chofer y Guía + Atención 24h</h4><p class="text-xs text-slate-600 mt-0.5">Acompañamiento y asistencia personalizada 24/7.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-13.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/hospedaje-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-hotel"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">13. Hospedaje en la Playa</h4><p class="text-xs text-slate-600 mt-0.5">Hotel frente al mar en Juan Dolio / zona costera.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-14.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/desayunos-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-utensils"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">14. Desayunos Incluidos</h4><p class="text-xs text-slate-600 mt-0.5">Alimentación matutina lista cada día.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-15.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/almuerzos-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-burger"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">15. Almuerzos en Excursiones</h4><p class="text-xs text-slate-600 mt-0.5">Comidas buffet servidas en las excursiones de playa.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-16.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/visa-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-passport"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">16. Pago Derecho a Visa</h4><p class="text-xs text-slate-600 mt-0.5">Costo e impuestos de visado 100% cubiertos.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-17.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/eticket-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-file-contract"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">17. E-Ticket Migratorio</h4><p class="text-xs text-slate-600 mt-0.5">Nosotros realizamos el llenado del pase digital aduanal.</p></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
-                    <div class="h-36 overflow-hidden relative bg-slate-950">
-                        <video loop muted playsinline poster="imagenes/inc-18.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <source src="videos/malecon-video.mp4" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors flex items-center justify-center pointer-events-none">
-                            <div class="w-10 h-10 rounded-full bg-slate-950/60 border border-white/40 text-white flex items-center justify-center backdrop-blur-sm group-hover:scale-110 group-hover:bg-dom-red transition-all shadow-lg">
-                                <i class="fa-solid fa-play text-xs pl-0.5"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-dom-blue/10 text-dom-blue flex items-center justify-center text-base shrink-0 mt-0.5"><i class="fa-solid fa-city"></i></div>
-                        <div><h4 class="font-bold text-slate-900 text-sm">18. Malecón San Pedro de Macorís</h4><p class="text-xs text-slate-600 mt-0.5">Visita al centro histórico y malecón icónico.</p></div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
@@ -695,7 +389,7 @@
                                 <span class="text-sm font-bold text-white">Efectivo / Transferencia:</span>
                                 <span class="text-2xl font-extrabold text-dom-gold">$35,000 MXN</span>
                             </div>
-                            <span class="block text-[10px] text-right text-dom-gold font-bold">¡Descuento por costo directo applied!</span>
+                            <span class="block text-[10px] text-right text-dom-gold font-bold">¡Descuento por costo directo aplicado!</span>
                         </div>
 
                         <ul class="text-xs text-slate-100 space-y-2 mb-6">
@@ -845,7 +539,7 @@
         </div>
     </section>
 
-    <section id="openbar" class="py-16 bg-gradient-to-r from-dom-blue via-dom-bluelight to-dom-red text-white relative shadow-inner">
+    <section id="openbar" class="py-16 bg-dom-blue text-white relative shadow-inner border-y border-dom-gold/30">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="space-y-3 text-center md:text-left">
                 <span class="bg-white/20 text-white font-bold text-xs uppercase px-3 py-1 rounded-full border border-white/30">Upgrade Opcional</span>
@@ -854,10 +548,56 @@
                     Incluye cerveza limitada y ron con cola durante los días del tour. ¡Y para los que no consumen alcohol, agua y refrescos ilimitados!
                 </p>
             </div>
-            <a href="#reservar" class="bg-slate-950 hover:bg-slate-900 text-white font-bold px-8 py-4 rounded-full text-sm transition-transform hover:scale-105 shadow-2xl shrink-0 flex items-center gap-2 border border-white/20">
-                <i class="fa-solid fa-wine-glass text-dom-gold"></i>
+            <a href="#reservar" class="bg-dom-gold hover:bg-yellow-400 text-slate-950 font-bold px-8 py-4 rounded-full text-sm transition-transform hover:scale-105 shadow-2xl shrink-0 flex items-center gap-2 border border-white/20">
+                <i class="fa-solid fa-wine-glass text-dom-blue"></i>
                 <span>Agregar Barra Libre ($100 USD)</span>
             </a>
+        </div>
+    </section>
+
+    <section id="fundacion" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+                    <span class="bg-dom-gold/20 text-dom-gold border border-dom-gold/40 font-bold text-xs uppercase px-3.5 py-1.5 rounded-full inline-flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-dom-red animate-pulse"></i> Viajar Con Propósito
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold font-serif text-white tracking-tight leading-tight">
+                        Tu viaje trasciende: <br>
+                        <span class="text-dom-gold font-serif italic">"We Just Want To Help"</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Wakanda Tours nació del sueño de dos cofundadores originarios de República Dominicana. Movidos por la solidaridad, crearon hace años la fundación <strong>"We Just Want To Help"</strong>, dedicada a apoyar comunidades vulnerables tanto en México como en República Dominicana.
+                    </p>
+                    <div class="p-5 rounded-2xl bg-dom-blue/60 border border-dom-gold/30 text-xs sm:text-sm text-slate-200 space-y-2">
+                        <p class="font-semibold text-dom-gold flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-ribbon text-dom-red"></i> Un legado que trasciende fronteras
+                        </p>
+                        <p class="leading-relaxed">
+                            Tras la lamentable partida de uno de nuestros cofundadores, la parte proporcional de la empresa que le pertenecía **se destina íntegramente como donación directa** a la fundación. Hoy, en honor a su memoria y junto al cofundador radicado en México, mantenemos vivo este compromiso.
+                        </p>
+                    </div>
+                    <p class="text-xs text-sky-200 font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-dom-gold text-base"></i>
+                        <span>Con cada paquete reservado con Wakanda Tours, contribuyes directamente a esta gran causa.</span>
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5" data-aos="fade-left">
+                    <div class="bg-slate-800/90 p-8 rounded-3xl border border-white/10 shadow-2xl text-center space-y-4 relative">
+                        <div class="w-16 h-16 rounded-full bg-dom-red/20 border border-dom-red text-dom-red flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-serif text-white">We Just Want To Help</h3>
+                        <p class="text-xs text-slate-400">Fundación Sin Fines de Lucro · México & República Dominicana</p>
+                        <div class="pt-2 border-t border-white/10 text-xs text-slate-300 space-y-2 text-left">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-dom-gold"></i> Apoyo médico y alimentario a familias</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-dom-gold"></i> Donaciones continuas en MX y RD</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-dom-gold"></i> Transparencia y donación automática por viaje</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -976,7 +716,7 @@
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                             <p class="text-slate-700 text-sm italic leading-relaxed">
-                                "Fuimos 4 amigas a la salida de Carnaval. Un viaje sumamente completo y organizado. Repetiríamos con Wakanda Tours sin duda."
+                                "Fuimos 4 amigas a la salida de Carnaval. Un viaje sumamente completo y organized. Repetiríamos con Wakanda Tours sin duda."
                             </p>
                         </div>
                     </div>
@@ -994,7 +734,7 @@
 
     <div id="sales-toast" class="fixed bottom-6 right-24 z-40 bg-dom-blue text-white border border-dom-gold/50 p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-500 translate-y-20 opacity-0 max-w-xs backdrop-blur-md">
         <div class="w-9 h-9 rounded-xl bg-dom-red/30 text-white flex items-center justify-center text-base shrink-0 border border-dom-red/50">
-            <i class="fa-solid fa-fire animate-bounce"></i>
+            <i class="fa-solid fa-fire animate-bounce text-dom-gold"></i>
         </div>
         <div class="text-xs">
             <p class="font-bold text-white" id="toast-user">Carlos M. de CDMX</p>
@@ -1007,6 +747,33 @@
        class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl animate-float hover:scale-110 transition-transform border-2 border-white">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <div id="postcard-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl relative border border-slate-200 animate-float" style="animation-duration:0s">
+            <button onclick="closePostcardModal()" class="absolute top-4 right-4 z-10 text-white hover:text-slate-200 text-xl w-9 h-9 rounded-full bg-slate-950/60 flex items-center justify-center backdrop-blur-sm border border-white/20">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="h-60 overflow-hidden relative">
+                <img id="postcard-img" src="" alt="Postal Inclusión" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between text-white">
+                    <span id="postcard-badge" class="bg-dom-gold text-slate-950 font-bold text-[10px] uppercase px-2.5 py-0.5 rounded-full">Inclusión Incluida</span>
+                    <span class="text-xs text-sky-200 font-semibold"><i class="fa-solid fa-stamp mr-1"></i>Wakanda Tours 🇩🇴</span>
+                </div>
+            </div>
+            <div class="p-6 sm:p-8 space-y-3 bg-white">
+                <div class="flex items-center gap-3">
+                    <div id="postcard-icon" class="w-10 h-10 rounded-xl bg-dom-blue/10 text-dom-blue flex items-center justify-center text-xl shrink-0"></div>
+                    <h3 id="postcard-title" class="text-xl sm:text-2xl font-extrabold font-serif text-dom-blue"></h3>
+                </div>
+                <p id="postcard-desc" class="text-sm text-slate-600 leading-relaxed"></p>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs font-bold text-emerald-600 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> 100% Cubierto en tu paquete</span>
+                    <button onclick="closePostcardModal()" class="bg-dom-blue text-white font-bold text-xs px-4 py-2 rounded-xl hover:bg-dom-bluelight transition-all">Cerrar Postal</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="payment-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200 overflow-hidden max-h-[90vh] overflow-y-auto">
@@ -1099,48 +866,77 @@
     <script>
         AOS.init({ duration: 800, once: true });
 
-        // REPRODUCCIÓN FORZADA DEL VIDEO HERO AL CARGAR
+        // ARRAY COMPLETO DE LAS 18 INCLUSIONES PARA RENDERIZADO Y MODAL POSTAL
+        const inclusionesData = [
+            { id: 1, title: "1. Vuelos Redondos", icon: "fa-plane", img: "imagenes/inc-1.jpg", fallback: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80", desc: "Incluye boletos de avión redondos con salida directa desde el AIFA (Aeropuerto Internacional Felipe Ángeles) hacia Santo Domingo con equipaje incluido." },
+            { id: 2, title: "2. Seguro de Viajero", icon: "fa-shield-halved", img: "imagenes/inc-2.jpg", fallback: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", desc: "Cobertura médica y de viaje integral durante toda tu estancia en República Dominicana para tu total tranquilidad." },
+            { id: 3, title: "3. Excursión Isla Saona", icon: "fa-ship", img: "imagenes/isla-saona.jpg", fallback: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", desc: "Navegación en catamarán con música, parada en la piscina natural repleta de estrellas de mar y almuerzo buffet caribeño en la isla." },
+            { id: 4, title: "4. Excursión Los Tres Ojos", icon: "fa-water", img: "imagenes/inc-4.jpg", fallback: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80", desc: "Exploración del impresionante Parque Nacional subterráneo formado por cenotes cavernosos y lagos cristalinos de agua dulce." },
+            { id: 5, title: "5. Cuevas de las Maravillas", icon: "fa-mountain", img: "imagenes/inc-5.jpg", fallback: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80", desc: "Recorrido por espectaculares cavernas subterráneas con petroglifos reales grabados por la cultura ancestral taína." },
+            { id: 6, title: "6. Tour Ciudad Colonial", icon: "fa-landmark", img: "imagenes/inc-6.jpg", fallback: "https://images.unsplash.com/photo-1568402102990-bc541580b59f?auto=format&fit=crop&w=800&q=80", desc: "Recorrido histórico guiado por la primera ciudad de América: Zona Colonial de Santo Domingo, Mercado Modelo y Faro a Colón." },
+            { id: 7, title: "7. Excursión en Buggies", icon: "fa-car-side", img: "imagenes/inc-7.jpg", fallback: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80", desc: "Aventura llena de adrenalina manejando buggies todoterreno 4x4 por caminos rurales tropicales y senderos de barro." },
+            { id: 8, title: "8. Cenote Cuevas Taínas", icon: "fa-person-swimming", img: "imagenes/inc-8.jpg", fallback: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", desc: "Nado refrescante y místico dentro de la cueva taína subterránea con aguas de color azul turquesa." },
+            { id: 9, title: "9. Playa Juan Dolio", icon: "fa-umbrella-beach", img: "imagenes/inc-9.jpg", fallback: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80", desc: "Días de descanso relajante en las aguas cálidas y tranquilas de la hermosa costa caribeña en Juan Dolio." },
+            { id: 10, title: "10. Playa Macao Punta Cana", icon: "fa-sun", img: "imagenes/inc-10.jpg", fallback: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80", desc: "Visita a una de las playas caribeñas más reconocidas a nivel mundial en la icónica zona de Punta Cana." },
+            { id: 11, title: "11. Transporte Privado", icon: "fa-van-shuttle", img: "imagenes/inc-11.jpg", fallback: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80", desc: "Unidades terrestres exclusivas con aire acondicionado para todos los traslados del grupo entre aeropuerto, hotel y excursiones." },
+            { id: 12, title: "12. Chofer y Guía + Atención 24h", icon: "fa-user-check", img: "imagenes/inc-12.jpg", fallback: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80", desc: "Chofer profesional, guía local especializado y asistencia continua de nuestro equipo las 24 horas durante todo tu viaje." },
+            { id: 13, title: "13. Hospedaje en la Playa", icon: "fa-hotel", img: "imagenes/inc-13.jpg", fallback: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80", desc: "Estancia cómoda en hotel con ubicación frente al mar en la zona turística costera de Juan Dolio." },
+            { id: 14, title: "14. Desayunos Incluidos", icon: "fa-utensils", img: "imagenes/inc-14.jpg", fallback: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=80", desc: "Alimentación matutina buffet lista todos los días de tu estancia en el hotel." },
+            { id: 15, title: "15. Almuerzos en Excursiones", icon: "fa-burger", img: "imagenes/inc-15.jpg", fallback: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80", desc: "Comidas buffet regionales preparadas y servidas durante las excursiones programadas." },
+            { id: 16, title: "16. Pago Derecho a Visa", icon: "fa-passport", img: "imagenes/inc-16.jpg", fallback: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80", desc: "Cobro de trámites, derechos migratorios y tasas de visado dominicano totalmente cubiertos." },
+            { id: 17, title: "17. E-Ticket Migratorio", icon: "fa-file-contract", img: "imagenes/inc-17.jpg", fallback: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80", desc: "Nosotros gestionamos e imprimimos el formulario electrónico obligatorio de entrada y salida aduanal." },
+            { id: 18, title: "18. Malecón San Pedro de Macorís", icon: "fa-city", img: "imagenes/inc-18.jpg", fallback: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80", desc: "Paseo por el emblemático malecón costero y centro urbano histórico de San Pedro de Macorís." }
+        ];
+
+        // RENDERIZAR TARJETAS DE INCLUSIONES
         document.addEventListener('DOMContentLoaded', () => {
-            const heroVideo = document.getElementById('hero-video');
-            if (heroVideo) {
-                heroVideo.muted = true;
-                const playPromise = heroVideo.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        // Si el navegador bloquea el autoplay inicial, se reproducirá con la primera interacción del usuario
-                        document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
-                        document.addEventListener('click', () => heroVideo.play(), { once: true });
-                    });
-                }
+            const grid = document.getElementById('inclusiones-grid');
+            if (grid) {
+                grid.innerHTML = inclusionesData.map(inc => `
+                    <div onclick="openPostcardModal(${inc.id})" class="bg-white rounded-2xl p-4 border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl cursor-pointer group flex items-start gap-4 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-dom-blue/10 text-dom-blue flex items-center justify-center text-xl shrink-0 group-hover:bg-dom-blue group-hover:text-white transition-colors">
+                            <i class="fa-solid ${inc.icon}"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-slate-900 text-sm group-hover:text-dom-blue transition-colors">${inc.title}</h4>
+                                <i class="fa-solid fa-envelope-open-text text-dom-gold opacity-60 group-hover:opacity-100 text-xs"></i>
+                            </div>
+                            <p class="text-xs text-slate-500 line-clamp-2 mt-1">${inc.desc}</p>
+                            <span class="inline-block text-[11px] font-bold text-dom-bluelight mt-2 group-hover:underline">Ver Postal con foto &rarr;</span>
+                        </div>
+                    </div>
+                `).join('');
             }
 
-            // REPRODUCCIÓN Y CONTROL DE VIDEOS DE INCLUSIONES
-            const isMobile = window.innerWidth < 768;
-            const videos = document.querySelectorAll('.hover-video');
+            // Reproducir Video Hero automáticamente
+            const heroVideo = document.getElementById('hero-bg-video');
+            if (heroVideo) {
+                heroVideo.play().catch(e => console.log('Autoplay preventivo hero:', e));
+            }
 
-            videos.forEach(video => {
-                video.muted = true; // Forzar Mute para autorizar reproducción por código
-                
-                if (isMobile) {
-                    video.setAttribute('autoplay', '');
-                    video.play().catch(()=>{});
-                } else {
-                    const card = video.closest('.inclusion-card');
-                    if(card) {
-                        card.addEventListener('mouseenter', () => {
-                            video.play().catch(err => console.log("Video hover play error:", err));
-                        });
-                        card.addEventListener('mouseleave', () => {
-                            video.pause();
-                            video.currentTime = 0;
-                        });
-                    }
-                }
-            });
-            
-            // Inicializar calculador de Stripe
             updateStripeDeposit(document.getElementById('modal-passengers-select').value);
         });
+
+        // FUNCIONALIDAD DEL MODAL TIPO POSTAL
+        function openPostcardModal(id) {
+            const data = inclusionesData.find(item => item.id === id);
+            if (!data) return;
+
+            const imgElem = document.getElementById('postcard-img');
+            imgElem.src = data.img;
+            imgElem.onerror = () => { imgElem.src = data.fallback; };
+
+            document.getElementById('postcard-title').innerText = data.title;
+            document.getElementById('postcard-desc').innerText = data.desc;
+            document.getElementById('postcard-icon').innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+
+            document.getElementById('postcard-modal').classList.remove('hidden');
+        }
+
+        function closePostcardModal() {
+            document.getElementById('postcard-modal').classList.add('hidden');
+        }
 
         // AUDIO PLAYER LOGIC Y CONTROL DE VOLUMEN
         const audio = document.getElementById('caribbean-audio');
@@ -1154,8 +950,8 @@
             if (isPlaying) {
                 audio.pause();
                 isPlaying = false;
-                musicIcon.className = 'fa-solid fa-compact-disc animate-spin-slow';
-                widgetIcon.className = 'fa-solid fa-play';
+                musicIcon.className = 'fa-solid fa-compact-disc animate-spin-slow text-dom-gold';
+                widgetIcon.className = 'fa-solid fa-play pl-0.5';
             } else {
                 if (audio.readyState === 0) {
                     audio.load();
@@ -1177,7 +973,7 @@
             audio.volume = val;
         }
 
-        // SINCRONIZACIÓN DE PASAJEROS ENTRE EL FORMULARIO Y STRIPE
+        // SINCRONIZACIÓN DE PASAJEROS ENTRE FORMULARIO Y STRIPE
         const DEPOSIT_PER_PERSON = 8000;
 
         function syncPassengers(val) {
@@ -1192,12 +988,10 @@
             
             document.getElementById('summary-passengers-count').innerText = count;
             document.getElementById('summary-deposit-amount').innerText = `$${totalDeposit.toLocaleString('es-MX')} MXN`;
-            
-            // Sincronizar select del form de lead si se cambia dentro del modal
             document.getElementById('lead-passengers').value = count;
         }
 
-        // Modal Functions
+        // Modal Stripe Functions
         function openPaymentModal() {
             document.getElementById('payment-modal').classList.remove('hidden');
         }
