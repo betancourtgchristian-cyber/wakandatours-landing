@@ -9,24 +9,19 @@
     <meta name="author" content="Pixel Grimoire x Wakanda Tours">
     <link rel="canonical" href="https://wakandatours.com/">
     
-    <!-- Open Graph / WhatsApp Preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wakanda Tours | República Dominicana Todo Incluido 🇩🇴">
     <meta property="og:description" content="Vuelos desde AIFA, hotel en playa, 10+ excursiones, alimentos, visa y atención 24/7. ¡Conoce nuestras fechas y descuentos por transferencia!">
     <meta property="og:image" content="imagenes/republica-playa-1.jpg">
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
 
-    <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script>
@@ -98,14 +93,12 @@
 </head>
 <body class="text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-dom-red selection:text-white">
 
-    <!-- AUDIO PLAYER CON CONTROL DE VOLUMEN (SONIDO DOMINICANO) -->
     <audio id="caribbean-audio" loop preload="auto">
         <source src="musica/republica-dominicana.mp3" type="audio/mpeg">
         <source src="musica/merengue.mp3" type="audio/mpeg">
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=caribbean-rhythm-bachata-merengue-112193.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- HEADER NAVIGATION -->
     <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-dom-blue/95 backdrop-blur-md border-b border-dom-red/30 text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
@@ -127,13 +120,11 @@
             </nav>
 
             <div class="flex items-center gap-3">
-                <!-- MUSIC TOGGLE BUTTON -->
-                <button id="music-toggle-btn" onclick="toggleAudio()" class="bg-gradient-to-r from-dom-red/30 to-dom-bluelight/30 hover:from-dom-red/50 hover:to-dom-bluelight/50 text-dom-gold border border-dom-gold/50 px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 shadow-inner">
+                <button id="music-toggle-btn" onclick="toggleAudio()" class="bg-dom-blue hover:bg-dom-bluelight text-dom-gold border border-dom-gold/50 px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 shadow-inner">
                     <i id="music-icon" class="fa-solid fa-compact-disc animate-spin-slow"></i>
                     <span id="music-text" class="hidden lg:inline">Sonido Dominicano 🎶</span>
                 </button>
 
-                <!-- STRIPE / RESERVA BUTTON -->
                 <button onclick="openPaymentModal()" class="bg-dom-red hover:bg-dom-reddark text-white font-bold px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm transition-all shadow-lg shadow-dom-red/30 flex items-center gap-2 hover:scale-105 border border-white/20">
                     <i class="fa-solid fa-credit-card"></i>
                     <span class="hidden sm:inline">Apartar con Tarjeta</span>
@@ -143,9 +134,8 @@
         </div>
     </header>
 
-    <!-- FLOATING MUSIC PLAYER WIDGET CON CONTROL DE VOLUMEN -->
     <div class="fixed bottom-6 left-6 z-40 bg-dom-blue/95 border border-dom-gold/60 backdrop-blur-md rounded-full p-2 pr-5 shadow-2xl flex items-center gap-3 text-white transition-all hover:scale-105">
-        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-gradient-to-r from-dom-red via-dom-gold to-dom-bluelight text-white flex items-center justify-center text-xl font-extrabold shadow-lg shrink-0 border border-white/30">
+        <button onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-dom-gold hover:bg-yellow-400 text-dom-blue flex items-center justify-center text-xl font-extrabold shadow-lg shrink-0 border border-white/50 transition-colors">
             <i id="widget-music-icon" class="fa-solid fa-play"></i>
         </button>
         <div class="text-xs">
@@ -164,15 +154,11 @@
         </div>
     </div>
 
-    <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-slate-950 text-white">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <video autoplay loop muted playsinline 
-                   poster="imagenes/republica-playa-1.jpg" 
-                   class="w-full h-full object-cover object-center scale-105">
+            <video id="hero-video" autoplay loop muted playsinline poster="imagenes/republica-playa-1.jpg" class="w-full h-full object-cover object-center scale-105">
                 <source src="videos/playa-republica-hero.mp4" type="video/mp4">
                 <source src="videos/hero-video.webm" type="video/webm">
-                <img src="imagenes/hero-playa.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
             </video>
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
@@ -195,7 +181,6 @@
                         Olvídate de gastos ocultos. Nos encargamos de tus vuelos, hotel frente al mar, 10+ excursiones, desayunos, comidas en tours, visa, e-ticket y atención personalizada 24/7.
                     </p>
 
-                    <!-- QUICK HIGHLIGHTS SUMMARY -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 text-white text-xs">
                         <div class="bg-dom-blue/80 p-3 rounded-2xl border border-white/20 backdrop-blur-sm text-center">
                             <i class="fa-solid fa-plane-circle-check text-dom-gold text-lg block mb-1"></i>
@@ -228,7 +213,6 @@
                     </div>
                 </div>
 
-                <!-- FORMULARIO DE APARTADO / CONVERSIÓN -->
                 <div id="reservar" class="lg:col-span-5" data-aos="fade-left" data-aos-duration="1000">
                     <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-800 relative overflow-hidden border border-dom-bluelight/30">
                         <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-dom-blue via-white to-dom-red"></div>
@@ -255,7 +239,6 @@
                             </span>
                         </div>
 
-                        <!-- CUENTA REGRESIVA -->
                         <div class="bg-dom-blue border border-dom-gold/40 rounded-2xl p-3.5 text-center mb-4 text-white shadow-inner backdrop-blur-md">
                             <p class="text-[10px] font-bold uppercase tracking-wider text-dom-gold mb-1.5">
                                 ⏰ La tarifa especial de preventa expira en:
@@ -339,19 +322,16 @@
         </div>
     </section>
 
-    <!-- INCLUSIONES CON VIDEO Y BOTÓN DE PLAY MEJORADO -->
     <section id="inclusiones" class="py-20 bg-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <span class="text-dom-blue font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-dom-bluelight/20">Experiencia 100% Resuelta</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-dom-blue tracking-tight mt-3">Tus 18 Inclusiones Todo Incluido</h2>
-                <p class="text-slate-600 mt-2 text-sm sm:text-base">Sin sorpresas ni gastos extra. Pasa el cursor sobre cada tarjeta para previsualizar la experiencia.</p>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Sin sorpresas ni gastos extra. Pasa el cursor o presiona sobre cada tarjeta para previsualizar la experiencia.</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Helper Macro para Video Card con Botón Play -->
-                <!-- 1. Vuelos -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-1.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -369,7 +349,6 @@
                     </div>
                 </div>
 
-                <!-- 2. Seguro -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-2.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -387,7 +366,6 @@
                     </div>
                 </div>
 
-                <!-- 3. Isla Saona -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/isla-saona.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -405,7 +383,6 @@
                     </div>
                 </div>
 
-                <!-- 4. Los Tres Ojos -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-4.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -423,7 +400,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Cuevas Maravillas -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-5.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -441,7 +417,6 @@
                     </div>
                 </div>
 
-                <!-- 6. Ciudad Colonial -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-6.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -459,7 +434,6 @@
                     </div>
                 </div>
 
-                <!-- 7. Buggies -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-7.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -477,7 +451,6 @@
                     </div>
                 </div>
 
-                <!-- 8. Cenote Cuevas Tainas -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-8.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -495,7 +468,6 @@
                     </div>
                 </div>
 
-                <!-- 9. Playa Juan Dolio -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-9.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -513,7 +485,6 @@
                     </div>
                 </div>
 
-                <!-- 10. Playa Macao -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-10.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -531,7 +502,6 @@
                     </div>
                 </div>
 
-                <!-- 11. Transporte Privado -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-11.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -549,7 +519,6 @@
                     </div>
                 </div>
 
-                <!-- 12. Chofer y Guía -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-12.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -567,7 +536,6 @@
                     </div>
                 </div>
 
-                <!-- 13. Hospedaje Playa -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-13.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -585,7 +553,6 @@
                     </div>
                 </div>
 
-                <!-- 14. Desayunos -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-14.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -603,7 +570,6 @@
                     </div>
                 </div>
 
-                <!-- 15. Almuerzos -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-15.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -621,7 +587,6 @@
                     </div>
                 </div>
 
-                <!-- 16. Visa -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-16.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -639,7 +604,6 @@
                     </div>
                 </div>
 
-                <!-- 17. E-Ticket -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-17.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -657,7 +621,6 @@
                     </div>
                 </div>
 
-                <!-- 18. Malecon -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-dom-bluelight transition-all shadow-md hover:shadow-xl group inclusion-card">
                     <div class="h-36 overflow-hidden relative bg-slate-950">
                         <video loop muted playsinline poster="imagenes/inc-18.jpg" class="hover-video w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -679,7 +642,6 @@
         </div>
     </section>
 
-    <!-- PRECIOS Y TARIFAS -->
     <section id="fechas" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
@@ -688,9 +650,7 @@
                 <p class="text-slate-600 mt-3 text-sm sm:text-base">Aprovecha nuestro <strong>descuento por pago directo en efectivo o transferencia</strong> para obtener el costo base real sin comisiones con tarjeta.</p>
             </div>
 
-            <!-- CARDS DE PRECIOS -->
             <div class="grid lg:grid-cols-3 gap-8 mb-16">
-                <!-- Noviembre 2026 -->
                 <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md flex flex-col justify-between hover:border-dom-bluelight transition-all">
                     <div>
                         <span class="bg-blue-100 text-dom-blue font-bold text-xs px-3 py-1 rounded-full">Otoño 2026</span>
@@ -719,7 +679,6 @@
                     </button>
                 </div>
 
-                <!-- Febrero 2027 (Carnaval) -->
                 <div class="bg-gradient-to-b from-dom-blue to-slate-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col justify-between relative overflow-hidden border-2 border-dom-gold">
                     <span class="absolute top-4 right-4 bg-dom-red text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">¡Edición Carnaval! 🎉</span>
                     <div>
@@ -736,7 +695,7 @@
                                 <span class="text-sm font-bold text-white">Efectivo / Transferencia:</span>
                                 <span class="text-2xl font-extrabold text-dom-gold">$35,000 MXN</span>
                             </div>
-                            <span class="block text-[10px] text-right text-dom-gold font-bold">¡Descuento por costo directo aplicado!</span>
+                            <span class="block text-[10px] text-right text-dom-gold font-bold">¡Descuento por costo directo applied!</span>
                         </div>
 
                         <ul class="text-xs text-slate-100 space-y-2 mb-6">
@@ -749,7 +708,6 @@
                     </button>
                 </div>
 
-                <!-- Agosto 2027 -->
                 <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md flex flex-col justify-between hover:border-dom-bluelight transition-all">
                     <div>
                         <span class="bg-amber-100 text-amber-900 font-bold text-xs px-3 py-1 rounded-full">Verano 2027</span>
@@ -779,7 +737,6 @@
                 </div>
             </div>
 
-            <!-- ITINERARIOS DÍA A DÍA CON DISEÑO REFORZADO -->
             <div class="flex justify-center mb-8 gap-3 sm:gap-6 flex-wrap">
                 <button onclick="switchTab('wt2026')" id="btn-wt2026" class="tab-btn active px-6 py-3.5 rounded-full text-xs sm:text-sm transition-all flex items-center gap-2 border border-slate-300">
                     <i class="fa-solid fa-calendar-days"></i>
@@ -791,7 +748,6 @@
                 </button>
             </div>
 
-            <!-- Tab Content 1: Tour Noviembre 2026 -->
             <div id="tab-wt2026" class="tab-content space-y-4 max-w-4xl mx-auto">
                 <div class="p-4 rounded-2xl bg-blue-50 border border-dom-bluelight/40 text-dom-blue text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4 shadow-sm">
                     <i class="fa-solid fa-plane-departure text-dom-bluelight text-xl"></i>
@@ -839,7 +795,6 @@
                 </div>
             </div>
 
-            <!-- Tab Content 2: Tour Febrero 2027 (Carnaval) -->
             <div id="tab-wt2027" class="tab-content hidden space-y-4 max-w-4xl mx-auto">
                 <div class="p-4 rounded-2xl bg-red-50 border border-dom-red/40 text-dom-red text-xs sm:text-sm font-semibold flex items-center gap-3 mb-4 shadow-sm">
                     <i class="fa-solid fa-masks-theater text-dom-red text-xl"></i>
@@ -890,7 +845,6 @@
         </div>
     </section>
 
-    <!-- UPGRADE OPEN BAR -->
     <section id="openbar" class="py-16 bg-gradient-to-r from-dom-blue via-dom-bluelight to-dom-red text-white relative shadow-inner">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
             <div class="space-y-3 text-center md:text-left">
@@ -907,7 +861,6 @@
         </div>
     </section>
 
-    <!-- FAQS CON DISEÑO REFORZADO -->
     <section id="faq" class="py-20 bg-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -949,7 +902,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIOS -->
     <section id="testimonios" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
@@ -959,7 +911,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonio 1 -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <div class="h-56 overflow-hidden relative">
@@ -986,7 +937,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 2 -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="h-56 overflow-hidden relative">
@@ -1013,7 +963,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 3 -->
                 <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                     <div>
                         <div class="h-56 overflow-hidden relative">
@@ -1043,7 +992,6 @@
         </div>
     </section>
 
-    <!-- NOTIFICACIÓN FLOTANTE -->
     <div id="sales-toast" class="fixed bottom-6 right-24 z-40 bg-dom-blue text-white border border-dom-gold/50 p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-500 translate-y-20 opacity-0 max-w-xs backdrop-blur-md">
         <div class="w-9 h-9 rounded-xl bg-dom-red/30 text-white flex items-center justify-center text-base shrink-0 border border-dom-red/50">
             <i class="fa-solid fa-fire animate-bounce"></i>
@@ -1054,14 +1002,12 @@
         </div>
     </div>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
     <a href="https://wa.me/525632134523?text=Hola%20Wakanda%20Tours,%20quiero%20informes%20para%20apartar%20mi%20paquete%20Todo%20Incluido%20a%20Rep%C3%BAblica%20Dominicana%20[Ref:%20LANDING-RD]" 
        target="_blank" 
        class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl animate-float hover:scale-110 transition-transform border-2 border-white">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- MODAL DE PAGO CON STRIPE -->
     <div id="payment-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200 overflow-hidden max-h-[90vh] overflow-y-auto">
             <button onclick="closePaymentModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
@@ -1134,7 +1080,6 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="bg-dom-blue text-slate-300 py-12 border-t border-dom-bluelight/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div class="text-xl font-extrabold font-serif text-white">WAKANDA TOURS & TRAVEL 🇩🇴</div>
@@ -1150,10 +1095,52 @@
         </div>
     </footer>
 
-    <!-- JS SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
+        // REPRODUCCIÓN FORZADA DEL VIDEO HERO AL CARGAR
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroVideo = document.getElementById('hero-video');
+            if (heroVideo) {
+                heroVideo.muted = true;
+                const playPromise = heroVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // Si el navegador bloquea el autoplay inicial, se reproducirá con la primera interacción del usuario
+                        document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
+                        document.addEventListener('click', () => heroVideo.play(), { once: true });
+                    });
+                }
+            }
+
+            // REPRODUCCIÓN Y CONTROL DE VIDEOS DE INCLUSIONES
+            const isMobile = window.innerWidth < 768;
+            const videos = document.querySelectorAll('.hover-video');
+
+            videos.forEach(video => {
+                video.muted = true; // Forzar Mute para autorizar reproducción por código
+                
+                if (isMobile) {
+                    video.setAttribute('autoplay', '');
+                    video.play().catch(()=>{});
+                } else {
+                    const card = video.closest('.inclusion-card');
+                    if(card) {
+                        card.addEventListener('mouseenter', () => {
+                            video.play().catch(err => console.log("Video hover play error:", err));
+                        });
+                        card.addEventListener('mouseleave', () => {
+                            video.pause();
+                            video.currentTime = 0;
+                        });
+                    }
+                }
+            });
+            
+            // Inicializar calculador de Stripe
+            updateStripeDeposit(document.getElementById('modal-passengers-select').value);
+        });
 
         // AUDIO PLAYER LOGIC Y CONTROL DE VOLUMEN
         const audio = document.getElementById('caribbean-audio');
@@ -1189,33 +1176,6 @@
         function changeVolume(val) {
             audio.volume = val;
         }
-
-        // LÓGICA DE VIDEOS EN HOVER Y AUTOPLAY EN MÓVIL
-        document.addEventListener('DOMContentLoaded', () => {
-            const isMobile = window.innerWidth < 768;
-            const videos = document.querySelectorAll('.hover-video');
-
-            videos.forEach(video => {
-                if (isMobile) {
-                    video.setAttribute('autoplay', '');
-                    video.play().catch(()=>{});
-                } else {
-                    const card = video.closest('.inclusion-card');
-                    if(card) {
-                        card.addEventListener('mouseenter', () => {
-                            video.play().catch(()=>{});
-                        });
-                        card.addEventListener('mouseleave', () => {
-                            video.pause();
-                            video.currentTime = 0;
-                        });
-                    }
-                }
-            });
-            
-            // Inicializar calculador de Stripe
-            updateStripeDeposit(document.getElementById('modal-passengers-select').value);
-        });
 
         // SINCRONIZACIÓN DE PASAJEROS ENTRE EL FORMULARIO Y STRIPE
         const DEPOSIT_PER_PERSON = 8000;
