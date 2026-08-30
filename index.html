@@ -89,6 +89,26 @@
         input[type=range]::-webkit-slider-thumb {
             background: #FFC72C;
         }
+
+        /* --- FIX VIDEO HERO: contenedor y capa de imagen de respaldo --- */
+        #hero-video-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #hero-bg-video,
+        #hero-bg-fallback {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        #hero-bg-fallback {
+            display: none;
+        }
     </style>
 </head>
 <body class="text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-dom-red selection:text-white">
@@ -156,19 +176,21 @@
 
     <section class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-slate-950 text-white">
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <video id="hero-bg-video" 
-                   autoplay 
-                   loop 
-                   muted 
-                   playsinline 
-                   webkit-playsinline
-                   preload="auto"
-                   poster="imagenes/republica-playa-1.jpg" 
-                   class="w-full h-full object-cover object-center scale-105 pointer-events-none">
-                <source src="videos/playa-republica-hero.mp4" type="video/mp4">
-                <source src="videos/hero-video.webm" type="video/webm">
-                <img src="imagenes/republica-playa-1.jpg" alt="Playa paradisíaca en República Dominicana" class="w-full h-full object-cover">
-            </video>
+            <div id="hero-video-wrapper">
+                <video id="hero-bg-video"
+                       autoplay
+                       loop
+                       muted
+                       playsinline
+                       webkit-playsinline
+                       preload="auto"
+                       poster="imagenes/republica-playa-1.jpg"
+                       class="scale-105 pointer-events-none">
+                    <source src="videos/playa-republica-hero.mp4" type="video/mp4">
+                    <source src="videos/hero-video.webm" type="video/webm">
+                </video>
+                <img id="hero-bg-fallback" src="imagenes/republica-playa-1.jpg" alt="Playa paradisíaca en República Dominicana" class="scale-105">
+            </div>
             <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
         </div>
             
@@ -917,13 +939,58 @@
                 `).join('');
             }
 
-            // REPRODUCCIÓN REFORZADA DEL VIDEO HERO
+            // --- FIX: REPRODUCCIÓN ROBUSTA DEL VIDEO HERO CON FALLBACK REAL ---
             const heroVideo = document.getElementById('hero-bg-video');
+            const heroFallback = document.getElementById('hero-bg-fallback');
+
             if (heroVideo) {
                 heroVideo.muted = true; // Forzar silenciamiento por JS para garantizar Autoplay
-                heroVideo.play().catch(error => {
-                    console.log("Autoplay bloqueado o archivo no encontrado:", error);
+                heroVideo.setAttribute('muted', ''); // algunos navegadores móviles solo respetan el atributo, no la propiedad
+
+                // Si NINGUNA de las <source> carga (404, códec no soportado, ruta inexistente, etc.)
+                // el navegador dispara "error" en el propio <video>. Ahí escondemos el video
+                // y mostramos la imagen de respaldo para que el hero nunca se quede en negro.
+                heroVideo.addEventListener('error', showHeroFallback);
+                heroVideo.querySelectorAll('source').forEach(src => {
+                    src.addEventListener('error', checkIfAllSourcesFailed);
                 });
+
+                function checkIfAllSourcesFailed() {
+                    // networkState 3 = NETWORK_NO_SOURCE -> ninguna fuente es utilizable
+                    if (heroVideo.networkState === 3 || heroVideo.error) {
+                        showHeroFallback();
+                    }
+                }
+
+                function showHeroFallback() {
+                    heroVideo.style.display = 'none';
+                    if (heroFallback) heroFallback.style.display = 'block';
+                    console.warn('Wakanda Tours: no se pudo cargar ningún video del hero (revisa que existan videos/playa-republica-hero.mp4 y videos/hero-video.webm en el servidor). Se muestra la imagen de respaldo.');
+                }
+
+                const playPromise = heroVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // Esto normalmente es el navegador bloqueando el autoplay (no un error del archivo).
+                        // Reintentamos en la primera interacción del usuario.
+                        console.log("Autoplay bloqueado, se reintentará con la primera interacción del usuario:", error);
+                        const retryPlay = () => {
+                            heroVideo.play().catch(() => {});
+                            document.removeEventListener('click', retryPlay);
+                            document.removeEventListener('touchstart', retryPlay);
+                        };
+                        document.addEventListener('click', retryPlay, { once: true });
+                        document.addEventListener('touchstart', retryPlay, { once: true });
+                    });
+                }
+
+                // Si tras 6s el video no tiene datos cargados (readyState 0 = HAVE_NOTHING),
+                // asumimos que las rutas están rotas y mostramos el respaldo.
+                setTimeout(() => {
+                    if (heroVideo.readyState === 0) {
+                        showHeroFallback();
+                    }
+                }, 6000);
             }
 
             updateStripeDeposit(document.getElementById('modal-passengers-select').value);
