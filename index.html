@@ -894,7 +894,16 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        // FIX: si la CDN de AOS (unpkg.com) está bloqueada por firewall/adblock/CSP del hosting,
+        // AOS.init() lanzaba un ReferenceError sin capturar que detenía TODO el script de esta página
+        // (el render de las 18 inclusiones, el countdown, el audio, el fix del video, todo).
+        // Con este check, si AOS no cargó, simplemente se desactivan las animaciones de scroll
+        // y el resto del sitio sigue funcionando con normalidad.
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true });
+        } else {
+            console.warn('[Wakanda Tours] La librería AOS no cargó (posible bloqueo de unpkg.com). Las animaciones de scroll quedan desactivadas, pero el resto del sitio funciona igual.');
+        }
 
         // ARRAY COMPLETO DE LAS 18 INCLUSIONES PARA RENDERIZADO Y MODAL POSTAL
         const inclusionesData = [
@@ -947,25 +956,35 @@
                 heroVideo.muted = true; // Forzar silenciamiento por JS para garantizar Autoplay
                 heroVideo.setAttribute('muted', ''); // algunos navegadores móviles solo respetan el atributo, no la propiedad
 
-                // Si NINGUNA de las <source> carga (404, códec no soportado, ruta inexistente, etc.)
-                // el navegador dispara "error" en el propio <video>. Ahí escondemos el video
-                // y mostramos la imagen de respaldo para que el hero nunca se quede en negro.
-                heroVideo.addEventListener('error', showHeroFallback);
-                heroVideo.querySelectorAll('source').forEach(src => {
-                    src.addEventListener('error', checkIfAllSourcesFailed);
+                const MEDIA_ERROR_MESSAGES = {
+                    1: 'MEDIA_ERR_ABORTED — la carga fue abortada (normalmente no es el problema aquí).',
+                    2: 'MEDIA_ERR_NETWORK — error de red al descargar el archivo (revisa Network tab: status code / CORS / hosting).',
+                    3: 'MEDIA_ERR_DECODE — el archivo se descargó pero el navegador NO PUDO DECODIFICARLO. Esto casi siempre significa un códec no soportado (ej. HEVC/H.265 en vez de H.264, o un mp4 corrupto/mal exportado).',
+                    4: 'MEDIA_ERR_SRC_NOT_SUPPORTED — el navegador no reconoce el formato/MIME type del archivo. Revisa que el servidor responda Content-Type: video/mp4 y que el contenedor sea válido.'
+                };
+
+                // Log de diagnóstico: nos dice EXACTAMENTE por qué falla, en vez de solo esconder el video.
+                heroVideo.addEventListener('error', () => {
+                    const err = heroVideo.error;
+                    if (err) {
+                        console.error(
+                            '%c[Wakanda Tours] Error reproduciendo el video del hero:',
+                            'color:red;font-weight:bold;',
+                            MEDIA_ERROR_MESSAGES[err.code] || `Código de error desconocido: ${err.code}`
+                        );
+                    }
+                    showHeroFallback();
                 });
 
-                function checkIfAllSourcesFailed() {
-                    // networkState 3 = NETWORK_NO_SOURCE -> ninguna fuente es utilizable
-                    if (heroVideo.networkState === 3 || heroVideo.error) {
-                        showHeroFallback();
-                    }
-                }
+                heroVideo.querySelectorAll('source').forEach(src => {
+                    src.addEventListener('error', () => {
+                        console.error(`[Wakanda Tours] La fuente "${src.src}" no cargó (revisa la ruta y el status code en Network).`);
+                    });
+                });
 
                 function showHeroFallback() {
                     heroVideo.style.display = 'none';
                     if (heroFallback) heroFallback.style.display = 'block';
-                    console.warn('Wakanda Tours: no se pudo cargar ningún video del hero (revisa que existan videos/playa-republica-hero.mp4 y videos/hero-video.webm en el servidor). Se muestra la imagen de respaldo.');
                 }
 
                 const playPromise = heroVideo.play();
@@ -984,13 +1003,19 @@
                     });
                 }
 
-                // Si tras 6s el video no tiene datos cargados (readyState 0 = HAVE_NOTHING),
-                // asumimos que las rutas están rotas y mostramos el respaldo.
+                // Si tras 10s el video no tiene NINGÚN dato cargado (readyState 0 = HAVE_NOTHING)
+                // y tampoco disparó "error", probablemente se quedó colgado (CORS silencioso, streaming
+                // roto, etc.). Lo logueamos con todo el estado para poder diagnosticarlo y mostramos el respaldo.
                 setTimeout(() => {
-                    if (heroVideo.readyState === 0) {
+                    if (heroVideo.readyState === 0 && !heroVideo.error) {
+                        console.warn('[Wakanda Tours] El video no cargó ningún dato en 10s.', {
+                            networkState: heroVideo.networkState,
+                            readyState: heroVideo.readyState,
+                            currentSrc: heroVideo.currentSrc
+                        });
                         showHeroFallback();
                     }
-                }, 6000);
+                }, 10000);
             }
 
             updateStripeDeposit(document.getElementById('modal-passengers-select').value);
