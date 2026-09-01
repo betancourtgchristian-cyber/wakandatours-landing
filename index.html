@@ -90,7 +90,6 @@
             background: #FFC72C;
         }
 
-        /* --- FIX VIDEO HERO: contenedor y capa de imagen de respaldo --- */
         #hero-video-wrapper {
             position: absolute;
             inset: 0;
@@ -263,10 +262,10 @@
                         <div class="bg-dom-red/10 border border-dom-red/30 rounded-xl p-3 mb-4 flex items-center justify-between">
                             <div class="flex items-center gap-2">
                                 <span class="w-2.5 h-2.5 rounded-full bg-dom-red animate-ping"></span>
-                                <span class="text-xs font-bold text-dom-red uppercase tracking-wide">¡Cupo Limitado!</span>
+                                <span class="text-xs font-bold text-dom-red uppercase tracking-wide">¡Alta Demanda!</span>
                             </div>
-                            <span class="text-xs font-extrabold bg-dom-red text-white px-2.5 py-0.5 rounded-full shadow">
-                                Quedan <span id="spots-left">4</span> lugares disponibles
+                            <span class="text-xs font-extrabold bg-dom-red text-white px-3 py-1 rounded-full shadow">
+                                Pocos lugares disponibles
                             </span>
                         </div>
 
@@ -357,12 +356,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
                 <span class="text-dom-blue font-bold text-xs uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-dom-bluelight/20">Experiencia 100% Resuelta</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-dom-blue tracking-tight mt-3">Tus 18 Inclusiones Todo Incluido</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif text-dom-blue tracking-tight mt-3">¿Qué incluye?</h2>
                 <p class="text-slate-600 mt-2 text-sm sm:text-base">Haz clic o toca cualquiera de las siguientes 18 tarjetas para abrir la postal con detalles e imagen completa.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="inclusiones-grid">
-                </div>
+            </div>
         </div>
     </section>
 
@@ -654,8 +653,8 @@
                         <i class="fa-solid fa-thumbtack"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-slate-900 text-base">¿Con cuánto se aparta el viaje?</h4>
-                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Puedes congelar tu lugar con un <strong>40% de anticipo por pasajero</strong> pagando vía Stripe o por transferencia bancaria ($8,000 MXN por persona). El saldo restante lo puedes liquidar en pagos antes de la fecha del vuelo.</p>
+                        <h4 class="font-bold text-slate-900 text-base">¿Con cuánto se aparta el viaje y cómo es el esquema de pagos?</h4>
+                        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Puedes congelar tu lugar con un <strong>40% de anticipo por pasajero</strong> pagando vía Stripe o transferencia bancaria ($8,000 MXN por persona). El saldo restante del 60% se debe liquidar <strong>por lo menos 40 días antes de la fecha del viaje</strong>, permitiéndote realizar pagos parciales cómodos a tu ritmo hasta completar tu reserva.</p>
                     </div>
                 </div>
 
@@ -894,18 +893,12 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // FIX: si la CDN de AOS (unpkg.com) está bloqueada por firewall/adblock/CSP del hosting,
-        // AOS.init() lanzaba un ReferenceError sin capturar que detenía TODO el script de esta página
-        // (el render de las 18 inclusiones, el countdown, el audio, el fix del video, todo).
-        // Con este check, si AOS no cargó, simplemente se desactivan las animaciones de scroll
-        // y el resto del sitio sigue funcionando con normalidad.
         if (typeof AOS !== 'undefined') {
             AOS.init({ duration: 800, once: true });
         } else {
             console.warn('[Wakanda Tours] La librería AOS no cargó (posible bloqueo de unpkg.com). Las animaciones de scroll quedan desactivadas, pero el resto del sitio funciona igual.');
         }
 
-        // ARRAY COMPLETO DE LAS 18 INCLUSIONES PARA RENDERIZADO Y MODAL POSTAL
         const inclusionesData = [
             { id: 1, title: "1. Vuelos Redondos", icon: "fa-plane", img: "imagenes/inc-1.jpg", fallback: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80", desc: "Incluye boletos de avión redondos con salida directa desde el AIFA (Aeropuerto Internacional Felipe Ángeles) hacia Santo Domingo con equipaje incluido." },
             { id: 2, title: "2. Seguro de Viajero", icon: "fa-shield-halved", img: "imagenes/inc-2.jpg", fallback: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80", desc: "Cobertura médica y de viaje integral durante toda tu estancia en República Dominicana para tu total tranquilidad." },
@@ -927,7 +920,6 @@
             { id: 18, title: "18. Malecón San Pedro de Macorís", icon: "fa-city", img: "imagenes/inc-18.jpg", fallback: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80", desc: "Paseo por el emblemático malecón costero y centro urbano histórico de San Pedro de Macorís." }
         ];
 
-        // INICIALIZACIÓN Y RENDERIZADO
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('inclusiones-grid');
             if (grid) {
@@ -942,28 +934,26 @@
                                 <i class="fa-solid fa-envelope-open-text text-dom-gold opacity-60 group-hover:opacity-100 text-xs"></i>
                             </div>
                             <p class="text-xs text-slate-500 line-clamp-2 mt-1">${inc.desc}</p>
-                            <span class="inline-block text-[11px] font-bold text-dom-bluelight mt-2 group-hover:underline">Ver Postal con foto &rarr;</span>
+                            <span class="inline-block text-[11px] font-bold text-dom-bluelight mt-2 group-hover:underline">Ver foto &rarr;</span>
                         </div>
                     </div>
                 `).join('');
             }
 
-            // --- FIX: REPRODUCCIÓN ROBUSTA DEL VIDEO HERO CON FALLBACK REAL ---
             const heroVideo = document.getElementById('hero-bg-video');
             const heroFallback = document.getElementById('hero-bg-fallback');
 
             if (heroVideo) {
-                heroVideo.muted = true; // Forzar silenciamiento por JS para garantizar Autoplay
-                heroVideo.setAttribute('muted', ''); // algunos navegadores móviles solo respetan el atributo, no la propiedad
+                heroVideo.muted = true;
+                heroVideo.setAttribute('muted', '');
 
                 const MEDIA_ERROR_MESSAGES = {
-                    1: 'MEDIA_ERR_ABORTED — la carga fue abortada (normalmente no es el problema aquí).',
-                    2: 'MEDIA_ERR_NETWORK — error de red al descargar el archivo (revisa Network tab: status code / CORS / hosting).',
-                    3: 'MEDIA_ERR_DECODE — el archivo se descargó pero el navegador NO PUDO DECODIFICARLO. Esto casi siempre significa un códec no soportado (ej. HEVC/H.265 en vez de H.264, o un mp4 corrupto/mal exportado).',
-                    4: 'MEDIA_ERR_SRC_NOT_SUPPORTED — el navegador no reconoce el formato/MIME type del archivo. Revisa que el servidor responda Content-Type: video/mp4 y que el contenedor sea válido.'
+                    1: 'MEDIA_ERR_ABORTED — la carga fue abortada.',
+                    2: 'MEDIA_ERR_NETWORK — error de red al descargar el archivo.',
+                    3: 'MEDIA_ERR_DECODE — el archivo se descargó pero el navegador NO PUDO DECODIFICARLO.',
+                    4: 'MEDIA_ERR_SRC_NOT_SUPPORTED — el navegador no reconoce el formato/MIME type.'
                 };
 
-                // Log de diagnóstico: nos dice EXACTAMENTE por qué falla, en vez de solo esconder el video.
                 heroVideo.addEventListener('error', () => {
                     const err = heroVideo.error;
                     if (err) {
@@ -978,7 +968,7 @@
 
                 heroVideo.querySelectorAll('source').forEach(src => {
                     src.addEventListener('error', () => {
-                        console.error(`[Wakanda Tours] La fuente "${src.src}" no cargó (revisa la ruta y el status code en Network).`);
+                        console.error(`[Wakanda Tours] La fuente "${src.src}" no cargó.`);
                     });
                 });
 
@@ -990,8 +980,6 @@
                 const playPromise = heroVideo.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(error => {
-                        // Esto normalmente es el navegador bloqueando el autoplay (no un error del archivo).
-                        // Reintentamos en la primera interacción del usuario.
                         console.log("Autoplay bloqueado, se reintentará con la primera interacción del usuario:", error);
                         const retryPlay = () => {
                             heroVideo.play().catch(() => {});
@@ -1003,9 +991,6 @@
                     });
                 }
 
-                // Si tras 10s el video no tiene NINGÚN dato cargado (readyState 0 = HAVE_NOTHING)
-                // y tampoco disparó "error", probablemente se quedó colgado (CORS silencioso, streaming
-                // roto, etc.). Lo logueamos con todo el estado para poder diagnosticarlo y mostramos el respaldo.
                 setTimeout(() => {
                     if (heroVideo.readyState === 0 && !heroVideo.error) {
                         console.warn('[Wakanda Tours] El video no cargó ningún dato en 10s.', {
@@ -1021,7 +1006,6 @@
             updateStripeDeposit(document.getElementById('modal-passengers-select').value);
         });
 
-        // FUNCIONALIDAD DEL MODAL TIPO POSTAL
         function openPostcardModal(id) {
             const data = inclusionesData.find(item => item.id === id);
             if (!data) return;
@@ -1041,7 +1025,6 @@
             document.getElementById('postcard-modal').classList.add('hidden');
         }
 
-        // AUDIO PLAYER LOGIC Y CONTROL DE VOLUMEN
         const audio = document.getElementById('caribbean-audio');
         let isPlaying = false;
         audio.volume = 0.7;
@@ -1076,7 +1059,6 @@
             audio.volume = val;
         }
 
-        // SINCRONIZACIÓN DE PASAJEROS ENTRE FORMULARIO Y STRIPE
         const DEPOSIT_PER_PERSON = 8000;
 
         function syncPassengers(val) {
@@ -1094,7 +1076,6 @@
             document.getElementById('lead-passengers').value = count;
         }
 
-        // Modal Stripe Functions
         function openPaymentModal() {
             document.getElementById('payment-modal').classList.remove('hidden');
         }
@@ -1109,7 +1090,6 @@
             document.getElementById('reservar').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // INTEGRACIÓN STRIPE REDIRECT
         function processStripePayment(e) {
             e.preventDefault();
             const stripeCheckoutLink = "https://buy.stripe.com/tu-link-oficial-de-stripe";
@@ -1123,7 +1103,6 @@
             closePaymentModal();
         }
 
-        // Tab Switching Logic
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1137,7 +1116,6 @@
             activeBtn.classList.remove('bg-white', 'text-slate-700');
         }
 
-        // WhatsApp Lead Form Handler
         function handleFormSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('lead-name').value;
@@ -1151,7 +1129,6 @@
             window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-        // CUENTA REGRESIVA DINÁMICA
         const targetDate = new Date("November 13, 2026 00:00:00").getTime();
         function updateCountdown() {
             const now = new Date().getTime();
@@ -1172,7 +1149,6 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // NOTIFICACIONES SOCIAL PROOF
         const fakePurchases = [
             { name: "Mariana G. de Monterrey", tour: "Nov 13-20, 2026" },
             { name: "Alejandro R. de Guadalajara", tour: "Feb 19-26, 2027 (Carnaval)" },
